@@ -7,8 +7,12 @@ import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import { playwright } from '@vitest/browser-playwright';
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
+// GitHub Pages project site: https://pythonidaer.github.io/crm/
+const githubPagesBase = '/crm/'
+
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? githubPagesBase : '/',
   plugins: [react()],
   test: {
     projects: [{
