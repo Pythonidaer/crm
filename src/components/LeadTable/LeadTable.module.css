@@ -1,0 +1,90 @@
+.wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-body-sm);
+}
+
+.thead {
+  background: var(--color-neutral-50);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.thSortable {
+  cursor: pointer;
+}
+
+.thSortable:hover {
+  color: var(--color-text-default);
+}
+
+.sortIcon {
+  margin-left: var(--space-1);
+  opacity: 0.5;
+}
+
+.sortIconActive {
+  opacity: 1;
+}
+
+.tr {
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background: var(--color-neutral-50);
+}
+
+.td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-default);
+  vertical-align: middle;
+}
+
+.companyName {
+  font-weight: var(--font-weight-semibold);
+}
+
+.companyLink {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.priorityHigh { color: var(--color-error-600); font-weight: var(--font-weight-semibold); }
+.priorityMedium { color: var(--color-warning-700); }
+.priorityLow { color: var(--color-text-muted); }

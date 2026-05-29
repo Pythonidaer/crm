@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.searchWrap {
+  flex: 1;
+  min-width: 200px;
+}
+
+.selectWrap {
+  min-width: 140px;
+}
+
+.clearBtn {
+  white-space: nowrap;
+}

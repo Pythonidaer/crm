@@ -1,0 +1,407 @@
+[
+  {
+    "companyName": "A Performing Arts Academy",
+    "address": "Swampscott Rd # 6",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Baker School of Gymnastics",
+    "address": "Swampscott Rd # 9B",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Bates Elementary School",
+    "address": "Liberty Hill Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Carlton Innovation School",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Carlton School",
+    "address": "Skerry St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Collins Middle School",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Dance Enthusiasm",
+    "address": "Mason St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Dragon Within Martial Arts",
+    "address": "Mason St # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Explorers Lifelong Learning",
+    "address": "Federal St # 10",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Francis X Collins Middle Sch",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Gordon-Conwell Theological",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Green Door Yoga",
+    "address": "Colonial Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Greenhouse School Inc",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Hermetic Arts Learning Ctr",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Horace Mann Laboratory School",
+    "address": "Willson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "International Education Advntg",
+    "address": "Federal St # 210",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Karate International Salem Ma",
+    "address": "Jefferson Ave # 202",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Kick",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Kosciuszko Polish Language",
+    "address": "Saint Peter St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Leap For Education Inc",
+    "address": "Congress St # 102",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Maitland Peter",
+    "address": "Cedarcrest Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Martial Arts Research Inst LLC",
+    "address": "Mason St # 201",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "North Shore Brazilian Jiu",
+    "address": "Colonial Rd # 210",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "North Shore Community College",
+    "address": "Federal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "North Shore Driving School",
+    "address": "Margin St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "North Shore Training Ctr",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Phoenix School",
+    "address": "Goodhue St # C3",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Renew Yoga LLC",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Sail-Em Inc",
+    "address": "Glendale St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem Academy Charter School",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem City-School Dept Bentley",
+    "address": "Memorial Dr",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem High School",
+    "address": "Willson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem Public Schools",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem School-Building Svc",
+    "address": "Willson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem Special Education",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem State Chapter/Msca",
+    "address": "Chapter/Msca",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem State College",
+    "address": "Center 121 Lor # 31",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Salem State University's Board",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Saltonstall School",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Small Business Devmnt Ctr",
+    "address": "Loring Ave # Cc-156",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "St Anne's School",
+    "address": "Cleveland St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "When Seconds Count",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Witch City Driving School",
+    "address": "Colonial Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Witchcraft Heights Elementary",
+    "address": "Frederick St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  },
+  {
+    "companyName": "Yoga Sakti",
+    "address": "Bridge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Education Services",
+    "selector": "Education Services",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=61"
+  }
+]
