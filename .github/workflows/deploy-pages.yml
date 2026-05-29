@@ -41,6 +41,8 @@ jobs:
 
       - name: Build for GitHub Pages
         run: pnpm run build:gh-pages
+        env:
+          GITHUB_PAGES: 'true'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
