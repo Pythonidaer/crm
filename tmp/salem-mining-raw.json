@@ -1,0 +1,58 @@
+[
+    {
+        "id": "7fadf8c9-a4c4-4a33-b6db-21b63d5736b3",
+        "companyName": "Devaney Energy",
+        "address": "Jefferson Ave",
+        "city": "Salem",
+        "state": "MA",
+        "industry": "Mining",
+        "phone": "",
+        "website": "",
+        "status": "not_contacted",
+        "priority": "low",
+        "selector": "",
+        "contactName": "",
+        "contactEmail": "",
+        "lastContactedAt": null,
+        "nextFollowUpAt": null,
+        "notes": "",
+        "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=21",
+        "qualification": {
+            "hasWebsite": false,
+            "accessibilityOpportunity": false,
+            "seoOpportunity": false,
+            "aeoOpportunity": false,
+            "decisionMakerFound": false
+        },
+        "createdAt": "2026-05-30T12:54:04.778Z",
+        "updatedAt": "2026-05-30T12:54:04.778Z"
+    },
+    {
+        "id": "05595220-4eaf-4c91-989c-50224689795c",
+        "companyName": "Hawthorne Oil Inc",
+        "address": "Lily St",
+        "city": "Salem",
+        "state": "MA",
+        "industry": "Mining",
+        "phone": "",
+        "website": "",
+        "status": "not_contacted",
+        "priority": "low",
+        "selector": "",
+        "contactName": "",
+        "contactEmail": "",
+        "lastContactedAt": null,
+        "nextFollowUpAt": null,
+        "notes": "",
+        "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=21",
+        "qualification": {
+            "hasWebsite": false,
+            "accessibilityOpportunity": false,
+            "seoOpportunity": false,
+            "aeoOpportunity": false,
+            "decisionMakerFound": false
+        },
+        "createdAt": "2026-05-30T12:54:04.778Z",
+        "updatedAt": "2026-05-30T12:54:04.778Z"
+    }
+]

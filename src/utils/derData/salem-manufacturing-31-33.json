@@ -1,0 +1,605 @@
+[
+  {
+    "companyName": "A & J King Artisan Bakers",
+    "address": "Central St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "A & J King Artisan Bakers",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Accuprobe",
+    "address": "Congress St # 201",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "American Surgical Co",
+    "address": "Congress St # 153",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Apogee Machining Svc",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Berton Paul W",
+    "address": "Patriot Ln",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Blue Ribbon Cake",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Bouchard & Son Inc Auto Svc",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Brew Box",
+    "address": "Essex St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Chaz Foods LLC",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Coffee Time Bake Shop",
+    "address": "Bridge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Concept Signs",
+    "address": "Bridge St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Creative Ink",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Crystal Systems Inc",
+    "address": "Congress St # 110",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Crystal Systems LLC",
+    "address": "Congress St # 251",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "David N Woerpel",
+    "address": "Turner St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Doyle Sail Maker",
+    "address": "Swampscott Rd # 8",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "E Mcgrath Inc",
+    "address": "Osborne St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "E W Hobbs Inc",
+    "address": "Fort Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Eva's Pastries Inc",
+    "address": "Albion St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Falmer Associates Inc",
+    "address": "Swampscott Rd # 10",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Far From the Tree Cider",
+    "address": "Jackson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Far From the Tree LLC",
+    "address": "Jackson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Fred J Dion Yacht Yard",
+    "address": "Glendale St # 3",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "G & D Tool Co Inc",
+    "address": "Proctor St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "G & E Steel Inc",
+    "address": "Florence St # 5",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Geological Field Svc",
+    "address": "Hubon St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Gillians Foods",
+    "address": "Congress St # 106",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Gorilla Printing",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Grind Factory",
+    "address": "Mason St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "GT Advanced Technologies",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "H & H Propeller Shop Inc",
+    "address": "St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Harbor Sweets",
+    "address": "Palmer St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Harbor Sweets Handmade Chclts",
+    "address": "Leavitt St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Hendrick Manufacturing",
+    "address": "Commercial St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Ilsa Cakes",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Infrared Laboratories",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "J & A Enterprises Inc",
+    "address": "Broadway",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Jet Fab Corp",
+    "address": "Putnam St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Jodi Bee Bakes",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Kernell's Automatic Machining",
+    "address": "State Route 61 N",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Lauranzano Bread Products LLC",
+    "address": "Willson St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Malik Embossing Corp",
+    "address": "Varney St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Minit Print Inc",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Moe Moe Print",
+    "address": "Dodge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Nightmare Factory",
+    "address": "St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "North Sails Northeast",
+    "address": "Glendale St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Notch Brewing Inc",
+    "address": "Derby St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "O'Donnell Cremations Funerals",
+    "address": "Washington Sq",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Odyssey Pro Sound",
+    "address": "Eden St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "P & H Industries Inc",
+    "address": "Ropes St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Pic's Screw Machine Inc",
+    "address": "Florence St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Pirate Dog Brand LLC",
+    "address": "Florence St # 3",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Proforma Ink",
+    "address": "Essex St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Repentful Creative",
+    "address": "Mason St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Smith Assembly House Cotting",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Soundown Corp",
+    "address": "Broadway",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Thermal Circuits Inc",
+    "address": "Technology Way Technology",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Tropical Products Inc",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "True Colors House Painting LLC",
+    "address": "",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "United States Biological Inc",
+    "address": "Technology Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Universal Grip LLC",
+    "address": "Loring Ave # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Vesuvius",
+    "address": "Paradise Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Village Silversmith",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "We Dream In Colour LLC",
+    "address": "Congress St # 103",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Witch Dr Glass Blowing Studio",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  },
+  {
+    "companyName": "Ye Olde Pepper Candy Companie",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Manufacturing (31-33)",
+    "selector": "Manufacturing (31-33)",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=31"
+  }
+]

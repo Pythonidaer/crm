@@ -1,0 +1,20 @@
+[
+  {
+    "companyName": "Devaney Energy",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Mining",
+    "selector": "Mining",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=21"
+  },
+  {
+    "companyName": "Hawthorne Oil Inc",
+    "address": "Lily St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Mining",
+    "selector": "Mining",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=21"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "companyName": "Cabot Farms Enterprises",
+    "address": "Salt Wall Ln",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Agriculture, Forestry, Fishing & Hunting",
+    "selector": "Agriculture, Forestry, Fishing & Hunting",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=11"
+  },
+  {
+    "companyName": "H & H Propeller Shop Inc",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Agriculture, Forestry, Fishing & Hunting",
+    "selector": "Agriculture, Forestry, Fishing & Hunting",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=11"
+  },
+  {
+    "companyName": "Idac Corp",
+    "address": "Summit Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Agriculture, Forestry, Fishing & Hunting",
+    "selector": "Agriculture, Forestry, Fishing & Hunting",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=11"
+  },
+  {
+    "companyName": "Murcielago Farms",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Agriculture, Forestry, Fishing & Hunting",
+    "selector": "Agriculture, Forestry, Fishing & Hunting",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=11"
+  }
+]

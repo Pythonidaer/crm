@@ -1,0 +1,749 @@
+[
+  {
+    "companyName": "A & B Home Inspections",
+    "address": "S Pine St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Above & Beyhond Home Inspctn",
+    "address": "1st St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Advantage Self Storage",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Armstrong Field Real Estate",
+    "address": "Essex St # C3",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Barbara King Realty Inc",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Barina Jim, AGT",
+    "address": "Hancock St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Bell At Salem Station Apt",
+    "address": "Bridge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Bell North Shore Apartments",
+    "address": "Carol Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Bishops Corner Realty LLC",
+    "address": "Loring Ave # 5",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Boston North Realty",
+    "address": "Freedom Holw",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Charles Haven & Assoc",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Colonial Hill Condominium",
+    "address": "Washington Sq",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Comida Mexican Taqueria",
+    "address": "Essex St # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Cornerlot Realty Group",
+    "address": "Loring Ave # 4",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Cubesmart Self Storage",
+    "address": "Swampscott Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "David Hark Assoc",
+    "address": "Loring Ave # 4",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Don Baker Real Estate",
+    "address": "Bradley Rd # 202",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Easi Self-Storage",
+    "address": "Swampscott Rd # 5",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "East Coast Properties",
+    "address": "Highland Ave # 11",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Enterprise Rent-A-Car",
+    "address": "Jefferson Ave # 101",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Essex Condominium",
+    "address": "Church St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Essex Properties Inc",
+    "address": "Wharf St # 3A",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Extra Space Storage",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Fair Weather",
+    "address": "Read St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Fairweather Apartments",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Gibraltar Management Co Inc",
+    "address": "Central St # 112",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "H L Realty Trust",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Hawthorne Commons",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Hertz",
+    "address": "Bridge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Highland Condominium Assn",
+    "address": "Olde Village Dr",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Highlander Plaza",
+    "address": "Traders Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Inspector 3755",
+    "address": "",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "K B Real Estate Inc",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Lanes Real Estate Svc Inc",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Launch Salem",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Little Co Realtors Little",
+    "address": "Federal St # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Loring Towers",
+    "address": "Loring Ave # C118",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Markwood Management",
+    "address": "Loring Hills Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Mclntire Realty Trust",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "N S D Realty",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Norman Street Counseling Assoc",
+    "address": "Norman St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "North River Apartments",
+    "address": "Goodhue St # C4",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "North River Canal LLC",
+    "address": "Goodhue St # C4",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Old Boston Properties",
+    "address": "Washington St # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Overlook Associates",
+    "address": "Lynde St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Paradise Plaza A Kimco Prprty",
+    "address": "Paradise Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Peabody Properties",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Penske Truck Rental",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Pequot Highland Management Ofc",
+    "address": "1st St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Pequot Highland Management Ofc",
+    "address": "St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Pickering North Condominiums",
+    "address": "North St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Plastilam Co",
+    "address": "Congress St # 305-13",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "PNC Boston Group Inc",
+    "address": "Pope St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Prime Storage",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Public Storage",
+    "address": "Goodhue St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Related Co",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Rent-A-Center",
+    "address": "Canal St # 101",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Rent-All",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Residence At Meuseum Place",
+    "address": "Central St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Residents At Essex Condos",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Riverwalk Resident Properties",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Salem Heights",
+    "address": "Pope St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Salem Highland Realty Trust",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Salem Housing Authority",
+    "address": "Charter St # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Shetland Park Self-Storage",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Shetland Properties",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Sparta Realty",
+    "address": "Lafayette St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "SWH Realty",
+    "address": "Mason St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Tache Real Estate",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Traders Row",
+    "address": "Traders Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "U-Haul Moving & Stge of Salem",
+    "address": "Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "U-Haul Neighborhood Dealer",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Vernet Properties Inc",
+    "address": "Washington St # 310",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Victory Management",
+    "address": "Washington St # 205",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Village By Village",
+    "address": "Washington St # 201",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Village Shopping Ctr LLC",
+    "address": "Wharf St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Village Vinnin SQ II",
+    "address": "Freedom Holw",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Weatherly Condo",
+    "address": "Weatherly Dr",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Weatherly Drive Condo Trust",
+    "address": "America Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Weatherly Drive Condo Trust",
+    "address": "Weatherly Dr",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Weatherly Drive Condos",
+    "address": "Weatherly Dr # 409",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "William Little Real Estate",
+    "address": "Federal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  },
+  {
+    "companyName": "Witch Pix Costume Studio",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Real Estate and Rental and Leasing",
+    "selector": "Real Estate and Rental and Leasing",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=53"
+  }
+]

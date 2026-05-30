@@ -187,3 +187,17 @@ src/
 │   └── placesEnrichment.ts
 └── styles/             # Global CSS
 ```
+
+---
+
+## TODO
+
+- [ ] Install `gh` with Homebrew to offload todo docs to GitHub Issues (`brew install gh && gh auth login`)
+- [ ] Create GitHub Issues for backlog items and track work via issue numbers
+- [ ] Test Google Places and build an API for gathering each lead's website and phone number
+- [ ] Report back to the design system — offload CRM components to the `@pythonidaer/ui` package
+- [ ] Figure out how to identify which local components/files should move to the design system repo
+- [ ] Clean up UI (prefer changes in the npm design-system package where possible)
+- [ ] Create a SQLite database and figure out the proper architecture for local persistence
+- [ ] Identify architectural improvements
+- [ ] Test a few leads end-to-end, then refine notes, follow-ups, and related UX

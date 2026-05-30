@@ -1,0 +1,758 @@
+[
+  {
+    "companyName": "Abraham Robert",
+    "address": "Balcomb St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Advantage Capital Corp",
+    "address": "Essex St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Ahmed Insurance Agency Inc",
+    "address": "North St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Allan Insurance Inc",
+    "address": "1/2 Jefferson Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "American Express Co",
+    "address": "Hazel St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "American Express Co",
+    "address": "Scenic Ter",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Arm Insurance Agency of MA Inc",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Avalon Risk Management",
+    "address": "Congress St # 407",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Bank of America",
+    "address": "Paradise Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Beacon Insurance Inc Co",
+    "address": "Loring Ave # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Bochynski Insurance Agency Inc",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Bookholz Fund Inc",
+    "address": "Margin St # 851",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Butterworth & O'Toole",
+    "address": "Brown St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Cabot Investing Advice",
+    "address": "North St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Cabot Wealth Management",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Cabot Wealth Network",
+    "address": "North St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Caggiano & Assoc",
+    "address": "Front St # 204",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Casey & Lundregan PC",
+    "address": "Washington St # 2",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Clement Desjardins Ins Agcy",
+    "address": "Front St # 201",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Coinflip Bitcoin ATM",
+    "address": "Bridge St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Coinflip Bitcoin ATM",
+    "address": "Loring Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Compton Consulting Group",
+    "address": "Derby Sq # 3R",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Culver Insurance Inc",
+    "address": "Central St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "David L Grey Investment CNSL",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Dennis Dickinson President",
+    "address": "Front St # 200",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Eastern Bank",
+    "address": "Congress St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Eastern Bank",
+    "address": "Washington St # 101",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Eastern Bank",
+    "address": "Central St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Eastern Bank",
+    "address": "Traders Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Easy Mortgage Apps LLC",
+    "address": "Loring Ave # 564",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Edward Jones",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Express Auto Ins Agcy Inc",
+    "address": "Congress St # 305-21",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Falcon Financial Corp",
+    "address": "Loring Ave # 203",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Farquhar Black Ins Agcy Inc",
+    "address": "Traders Way # 101",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Finer Wealth Management",
+    "address": "Loring Ave # 302",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Institution For Savings",
+    "address": "Paradise Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "John J Walsh Insurance Agency",
+    "address": "Margin St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Jonuz",
+    "address": "Congress St # 205-6",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Kroll Inc",
+    "address": "Washington St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Traders Way",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Gedney St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "North St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Libertyx Bitcoin ATM",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Littoral LLC",
+    "address": "Lawrence St # 3",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "LPL Financial",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "M R Shaw Insurance Inc",
+    "address": "Hawthorne Blvd # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "M&T Bank",
+    "address": "Traders Way # 6",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Maitland Financial Group",
+    "address": "Derby Sq",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Marblehead Bank",
+    "address": "Canal St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Mceachern James P & Assoc",
+    "address": "Congress St # 202",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Metro Credit Union",
+    "address": "Paradise Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Middleoak",
+    "address": "Norman St # 300",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Middleoak",
+    "address": "Holyoke Sq",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "New England Assn For Fncl Pro",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "New Point Acquisitions Inc",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "North Shore Bank",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "North Shore Bank",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Primary Residential Mortgage",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Richard L Anderson Financial",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Rockland Trust",
+    "address": "Washington St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Rose Insurance",
+    "address": "Margin St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Five Cents Savings Bank",
+    "address": "Washington St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Five Cents Savings Bank",
+    "address": "State Rd",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Five Cents Savings Bank",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Five Investment Svc LLC",
+    "address": "Salem Grn # 500",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Insurance Agency",
+    "address": "Boston St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Salem Main Street Initiative",
+    "address": "Essex St # 101",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Santander Bank",
+    "address": "New Derby St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Santander Bank",
+    "address": "Essex St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Solstice Capital Management",
+    "address": "Washington St # 303",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Soucy Insurance Agency Inc",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Soucy Insurance Agency Inc",
+    "address": "Layfetty St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "St Jean's Credit Union",
+    "address": "Highland Ave",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "St Jean's Credit Union",
+    "address": "Colonial Rd # 1A",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "St Jean's Credit Union",
+    "address": "Lafayette St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "TD Bank",
+    "address": "Loring Ave # 1",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Tinti & Navins",
+    "address": "Congress St # 414",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Washington Square Financial",
+    "address": "Salt Wall Ln",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "William C Burke Jr Ins Agcy",
+    "address": "Brown St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  },
+  {
+    "companyName": "Winebow Inc",
+    "address": "Andrew St",
+    "city": "Salem",
+    "state": "MA",
+    "sector": "Finance and Insurance",
+    "selector": "Finance and Insurance",
+    "sourceUrl": "https://lmi.dua.eol.mass.gov/lmi/EmployerLocator/ELResult?A=05&GA=000411&NCode=52"
+  }
+]
