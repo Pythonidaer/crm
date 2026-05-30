@@ -1,12 +1,19 @@
 import type { Lead } from '../types/lead'
+import { applyDefaults } from './leadValidation'
 
 const STORAGE_KEY = 'jonnovative_crm_leads'
+
+function normalizeLead(raw: Partial<Lead>): Lead {
+  return applyDefaults(raw)
+}
 
 export function getLeads(): Lead[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return []
-    return JSON.parse(raw) as Lead[]
+    const parsed = JSON.parse(raw) as Partial<Lead>[]
+    if (!Array.isArray(parsed)) return []
+    return parsed.map(normalizeLead)
   } catch {
     return []
   }

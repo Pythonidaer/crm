@@ -6,7 +6,7 @@ import { LeadCard } from '../../components/LeadCard'
 import { LeadFilters } from '../../components/LeadFilters'
 import { EmptyState } from '../../components/EmptyState'
 import { getLeads, deleteLead, saveLeads } from '../../utils/leadStorage'
-import { filterLeads } from '../../utils/leadFilters'
+import { filterLeads, EMPTY_LEAD_FILTERS } from '../../utils/leadFilters'
 import { sortLeads } from '../../utils/leadSorting'
 import { applyDefaults } from '../../utils/leadValidation'
 import { MOCK_LEADS } from '../../utils/mockLeadData'
@@ -15,14 +15,7 @@ import styles from './LeadListPage.module.css'
 
 const VIEW_KEY = 'jonnovative_crm_list_view'
 
-const EMPTY_FILTERS: LeadFiltersType = {
-  search: '',
-  city: '',
-  sector: '',
-  selector: '',
-  status: '',
-  priority: '',
-}
+const EMPTY_FILTERS = EMPTY_LEAD_FILTERS
 
 function generateId(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`

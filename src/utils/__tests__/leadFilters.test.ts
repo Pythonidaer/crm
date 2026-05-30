@@ -1,48 +1,65 @@
 import { describe, it, expect } from 'vitest'
-import { filterLeads } from '../leadFilters'
+import { filterLeads, EMPTY_LEAD_FILTERS } from '../leadFilters'
 import { MOCK_LEADS } from '../mockLeadData'
-
-const empty = { search: '', city: '', sector: '', selector: '', status: '', priority: '' }
 
 describe('filterLeads', () => {
   it('returns all leads with empty filters', () => {
-    expect(filterLeads(MOCK_LEADS, empty)).toHaveLength(MOCK_LEADS.length)
+    expect(filterLeads(MOCK_LEADS, EMPTY_LEAD_FILTERS)).toHaveLength(MOCK_LEADS.length)
   })
 
   it('filters by city', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, city: 'Salem' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, city: 'Salem' })
     expect(result.every((l) => l.city === 'Salem')).toBe(true)
     expect(result.length).toBeGreaterThan(0)
   })
 
   it('filters by sector', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, sector: 'Manufacturing' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, sector: 'Manufacturing' })
     expect(result.every((l) => l.sector === 'Manufacturing')).toBe(true)
   })
 
-  it('filters by selector', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, selector: 'Food Manufacturing' })
-    expect(result.every((l) => l.selector === 'Food Manufacturing')).toBe(true)
+  it('does not include selector in filter state', () => {
+    expect(Object.keys(EMPTY_LEAD_FILTERS)).not.toContain('selector')
   })
 
   it('filters by status', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, status: 'called' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, status: 'called' })
     expect(result.every((l) => l.status === 'called')).toBe(true)
   })
 
   it('filters by priority', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, priority: 'high' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, priority: 'high' })
     expect(result.every((l) => l.priority === 'high')).toBe(true)
   })
 
+  it('filters by lead fit tier', () => {
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, leadFitTier: 'strong' })
+    expect(result.every((l) => l.leadFitTier === 'strong')).toBe(true)
+  })
+
+  it('filters by hasWebsite=yes', () => {
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, hasWebsite: 'yes' })
+    expect(result.every((l) => Boolean(l.website))).toBe(true)
+  })
+
+  it('filters by enrichment status not_enriched', () => {
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, enrichmentStatus: 'not_enriched' })
+    expect(result.every((l) => (l.enrichmentStatus ?? 'not_enriched') === 'not_enriched')).toBe(true)
+  })
+
+  it('filters by hasPhone using international number', () => {
+    const lead = { ...MOCK_LEADS[0], phoneNumber: null, internationalPhoneNumber: '+1 978-555-0100' }
+    expect(filterLeads([lead], { ...EMPTY_LEAD_FILTERS, hasPhone: 'yes' })).toHaveLength(1)
+  })
+
   it('filters by search text (company name)', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, search: 'aqua' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, search: 'aqua' })
     expect(result.length).toBeGreaterThan(0)
     expect(result.every((l) => l.companyName.toLowerCase().includes('aqua'))).toBe(true)
   })
 
   it('returns empty array when no matches', () => {
-    const result = filterLeads(MOCK_LEADS, { ...empty, city: 'Boston' })
+    const result = filterLeads(MOCK_LEADS, { ...EMPTY_LEAD_FILTERS, city: 'Boston' })
     expect(result).toHaveLength(0)
   })
 })

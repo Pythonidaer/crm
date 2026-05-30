@@ -1,0 +1,254 @@
+export * from '@pythonidaer/tokens';
+import * as react from 'react';
+import { ElementType, ComponentPropsWithoutRef, ButtonHTMLAttributes, InputHTMLAttributes, HTMLAttributes, ReactNode, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
+import * as react_jsx_runtime from 'react/jsx-runtime';
+
+type BoxOwnProps<E extends ElementType = 'div'> = {
+    as?: E;
+    className?: string;
+    'data-testid'?: string;
+};
+type BoxProps<E extends ElementType = 'div'> = BoxOwnProps<E> & Omit<ComponentPropsWithoutRef<E>, keyof BoxOwnProps<E>>;
+declare const Box: <E extends ElementType = "div">(props: BoxProps<E> & {
+    ref?: React.Ref<Element>;
+}) => React.ReactElement | null;
+
+type TextVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body-large' | 'body' | 'small';
+type TextOwnProps<E extends ElementType = 'p'> = {
+    as?: E;
+    variant?: TextVariant;
+    className?: string;
+    'data-testid'?: string;
+};
+type TextProps<E extends ElementType = 'p'> = TextOwnProps<E> & Omit<ComponentPropsWithoutRef<E>, keyof TextOwnProps<E>>;
+declare const Text: <E extends ElementType = "p">(props: TextProps<E> & {
+    ref?: React.Ref<Element>;
+}) => React.ReactElement | null;
+
+type StackDirection = 'row' | 'column';
+type StackAlign = 'start' | 'center' | 'end' | 'stretch' | 'baseline';
+type StackJustify = 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly';
+type StackGap = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '8' | '10' | '12' | '16';
+type StackOwnProps<E extends ElementType = 'div'> = {
+    as?: E;
+    direction?: StackDirection;
+    align?: StackAlign;
+    justify?: StackJustify;
+    gap?: StackGap;
+    wrap?: boolean;
+    className?: string;
+    'data-testid'?: string;
+};
+type StackProps<E extends ElementType = 'div'> = StackOwnProps<E> & Omit<ComponentPropsWithoutRef<E>, keyof StackOwnProps<E>>;
+declare const Stack: <E extends ElementType = "div">(props: StackProps<E> & {
+    ref?: React.Ref<Element>;
+}) => React.ReactElement | null;
+
+type ContainerSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+type ContainerOwnProps<E extends ElementType = 'div'> = {
+    as?: E;
+    size?: ContainerSize;
+    className?: string;
+    'data-testid'?: string;
+};
+type ContainerProps<E extends ElementType = 'div'> = ContainerOwnProps<E> & Omit<ComponentPropsWithoutRef<E>, keyof ContainerOwnProps<E>>;
+declare const Container: <E extends ElementType = "div">(props: ContainerProps<E> & {
+    ref?: React.Ref<Element>;
+}) => React.ReactElement | null;
+
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+type ButtonSize = 'sm' | 'md' | 'lg';
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: ButtonVariant;
+    size?: ButtonSize;
+    loading?: boolean;
+    'data-testid'?: string;
+}
+declare const Button: react.ForwardRefExoticComponent<ButtonProps & react.RefAttributes<HTMLButtonElement>>;
+
+type CardVariant = 'default' | 'elevated' | 'bordered';
+type CardPadding = 'none' | 'sm' | 'md' | 'lg';
+interface CardOwnProps<E extends ElementType = 'div'> {
+    as?: E;
+    variant?: CardVariant;
+    padding?: CardPadding;
+    hoverable?: boolean;
+    interactive?: boolean;
+    className?: string;
+    'data-testid'?: string;
+}
+type CardProps<E extends ElementType = 'div'> = CardOwnProps<E> & Omit<ComponentPropsWithoutRef<E>, keyof CardOwnProps<E>>;
+declare const Card: <E extends ElementType = "div">(props: CardProps<E> & {
+    ref?: React.Ref<Element>;
+}) => React.ReactElement | null;
+
+interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
+    label: string;
+    error?: boolean;
+    'aria-describedby'?: string;
+    'data-testid'?: string;
+}
+declare const Checkbox: react.ForwardRefExoticComponent<CheckboxProps & react.RefAttributes<HTMLInputElement>>;
+
+interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
+    label: string;
+    htmlFor?: string;
+    error?: string;
+    hint?: string;
+    required?: boolean;
+    'data-testid'?: string;
+    children: ReactNode;
+}
+declare function FormField({ label, htmlFor, error, hint, required, className, children, ...rest }: FormFieldProps): react_jsx_runtime.JSX.Element;
+
+type InputSize = 'sm' | 'md' | 'lg';
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+    size?: InputSize;
+    error?: boolean;
+    'aria-label'?: string;
+    'aria-describedby'?: string;
+    'data-testid'?: string;
+}
+declare const Input: react.ForwardRefExoticComponent<InputProps & react.RefAttributes<HTMLInputElement>>;
+
+type SelectSize = 'sm' | 'md' | 'lg';
+interface SelectOption {
+    value: string;
+    label: string;
+    disabled?: boolean;
+}
+interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
+    size?: SelectSize;
+    error?: boolean;
+    options?: SelectOption[];
+    placeholder?: string;
+    'aria-label'?: string;
+    'aria-describedby'?: string;
+    'data-testid'?: string;
+}
+declare const Select: react.ForwardRefExoticComponent<SelectProps & react.RefAttributes<HTMLSelectElement>>;
+
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    error?: boolean;
+    'aria-label'?: string;
+    'aria-describedby'?: string;
+    'data-testid'?: string;
+}
+declare const TextArea: react.ForwardRefExoticComponent<TextAreaProps & react.RefAttributes<HTMLTextAreaElement>>;
+
+interface CaseStudyMetric {
+    value: string;
+    label: string;
+}
+interface CaseStudyCardProps extends HTMLAttributes<HTMLElement> {
+    title: string;
+    summary: string;
+    metrics?: CaseStudyMetric[];
+    imageSrc?: string;
+    imageAlt?: string;
+    tags?: string[];
+    ctaLabel?: string;
+    ctaHref?: string;
+    featured?: boolean;
+    compact?: boolean;
+    'data-testid'?: string;
+}
+declare function CaseStudyCard({ title, summary, metrics, imageSrc, imageAlt, tags, ctaLabel, ctaHref, featured, compact, className, ...rest }: CaseStudyCardProps): react_jsx_runtime.JSX.Element;
+
+interface FooterLink {
+    label: string;
+    href: string;
+}
+interface FooterColumn {
+    heading: string;
+    links: FooterLink[];
+}
+interface FooterProps extends HTMLAttributes<HTMLElement> {
+    logo?: ReactNode;
+    tagline?: string;
+    columns?: FooterColumn[];
+    legalLinks?: FooterLink[];
+    copyright?: string;
+    newsletter?: boolean;
+    onNewsletterSubmit?: (email: string) => void;
+    variant?: 'simple' | 'multi-column' | 'newsletter';
+    'data-testid'?: string;
+}
+declare function Footer({ logo, tagline, columns, legalLinks, copyright, newsletter, onNewsletterSubmit, variant, className, ...rest }: FooterProps): react_jsx_runtime.JSX.Element;
+
+interface LogoItem {
+    src: string;
+    alt: string;
+    href?: string;
+    width?: number;
+    height?: number;
+}
+interface LogoCloudProps extends HTMLAttributes<HTMLDivElement> {
+    logos: LogoItem[];
+    title?: string;
+    columns?: 2 | 3 | 4 | 5 | 6;
+    'data-testid'?: string;
+}
+declare function LogoCloud({ logos, title, columns, className, ...rest }: LogoCloudProps): react_jsx_runtime.JSX.Element;
+
+interface NavLink {
+    label: string;
+    href: string;
+    current?: boolean;
+}
+type NavigationVariant = 'centered' | 'split' | 'minimal' | 'cta-right';
+interface NavigationProps extends HTMLAttributes<HTMLElement> {
+    logo: ReactNode;
+    links: NavLink[];
+    variant?: NavigationVariant;
+    ctaLabel?: string;
+    onCtaClick?: () => void;
+    'data-testid'?: string;
+}
+declare function Navigation({ logo, links, variant, ctaLabel, onCtaClick, className, ...rest }: NavigationProps): react_jsx_runtime.JSX.Element;
+
+interface PricingFeature {
+    text: string;
+    included: boolean;
+}
+interface PricingCardProps extends HTMLAttributes<HTMLDivElement> {
+    title: string;
+    price: string;
+    billingPeriod?: string;
+    description?: string;
+    features: PricingFeature[];
+    ctaLabel: string;
+    onCtaClick?: () => void;
+    featured?: boolean;
+    badge?: string;
+    'data-testid'?: string;
+}
+declare function PricingCard({ title, price, billingPeriod, description, features, ctaLabel, onCtaClick, featured, badge, className, ...rest }: PricingCardProps): react_jsx_runtime.JSX.Element;
+
+interface StatItem {
+    value: string;
+    label: string;
+    description?: string;
+    highlighted?: boolean;
+}
+interface StatsBlockProps extends HTMLAttributes<HTMLDListElement> {
+    stats: StatItem[];
+    columns?: 2 | 3 | 4;
+    'data-testid'?: string;
+}
+declare function StatsBlock({ stats, columns, className, ...rest }: StatsBlockProps): react_jsx_runtime.JSX.Element;
+
+interface TestimonialProps extends HTMLAttributes<HTMLElement> {
+    quote: string;
+    name: string;
+    title: string;
+    company?: string;
+    avatarSrc?: string;
+    avatarAlt?: string;
+    dark?: boolean;
+    compact?: boolean;
+    'data-testid'?: string;
+}
+declare function Testimonial({ quote, name, title, company, avatarSrc, avatarAlt, dark, compact, className, ...rest }: TestimonialProps): react_jsx_runtime.JSX.Element;
+
+export { Box, type BoxProps, Button, type ButtonProps, type ButtonSize, type ButtonVariant, Card, type CardPadding, type CardProps, type CardVariant, CaseStudyCard, type CaseStudyCardProps, type CaseStudyMetric, Checkbox, type CheckboxProps, Container, type ContainerProps, Footer, type FooterColumn, type FooterLink, type FooterProps, FormField, type FormFieldProps, Input, type InputProps, type InputSize, LogoCloud, type LogoCloudProps, type LogoItem, type NavLink, Navigation, type NavigationProps, type NavigationVariant, PricingCard, type PricingCardProps, type PricingFeature, Select, type SelectOption, type SelectProps, type SelectSize, Stack, type StackProps, type StatItem, StatsBlock, type StatsBlockProps, Testimonial, type TestimonialProps, Text, TextArea, type TextAreaProps, type TextProps };

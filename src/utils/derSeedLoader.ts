@@ -1,35 +1,87 @@
-import type { Lead } from '../types/lead'
 import { importLeads } from './leadImportExport'
 import { getLeads, saveLeads } from './leadStorage'
+import { applyDefaults } from './leadValidation'
+import { matchKey } from './leadMergeKey.js'
+import enrichedLeads from './leads/salem-leads.enriched.json'
+import type { Lead } from '../types/lead'
 
-const derSeedFiles = import.meta.glob<Partial<Lead>[]>(
-  './derData/*.json',
-  { eager: true, import: 'default' },
-)
+export const ENRICHED_DATA_VERSION = '2'
 
-/** Load all DER seed JSON files into localStorage, skipping duplicates. */
-export function seedFromDerDataFiles(): number {
-  let current = getLeads()
-  let added = 0
+const CRM_PRESERVE_KEYS: (keyof Lead)[] = [
+  'status',
+  'priority',
+  'contactName',
+  'contactRole',
+  'contactEmail',
+  'lastContactedAt',
+  'nextFollowUpAt',
+  'notes',
+  'qualification',
+]
 
-  for (const rows of Object.values(derSeedFiles)) {
-    const { imported } = importLeads(JSON.stringify(rows), current)
-    if (imported.length > 0) {
-      current = [...current, ...imported]
-      added += imported.length
-    }
-  }
+function mergeCrmFields(enriched: Partial<Lead>, existing: Lead): Lead {
+  const preserved = Object.fromEntries(
+    CRM_PRESERVE_KEYS.map((key) => [key, existing[key]]),
+  ) as Partial<Lead>
 
-  if (added > 0) saveLeads(current)
-  return added
+  return applyDefaults({
+    ...enriched,
+    ...preserved,
+    id: enriched.id ?? existing.id,
+    createdAt: existing.createdAt,
+  })
 }
 
-/** On first visit (empty CRM), auto-load any DER seed JSON files. */
+/** Replace local leads with merged enriched dataset, preserving CRM workflow fields. */
+export function syncEnrichedDataset(): number {
+  const storedVersion = localStorage.getItem('jonnovative_crm_enriched_version')
+  if (storedVersion === ENRICHED_DATA_VERSION) return 0
+
+  const existing = getLeads()
+  const existingByKey = new Map(existing.map((lead) => [matchKey(lead), lead]))
+
+  const synced = (enrichedLeads as Partial<Lead>[]).map((raw) => {
+    const prev = existingByKey.get(matchKey(raw))
+    return prev ? mergeCrmFields(raw, prev) : applyDefaults(raw)
+  })
+
+  saveLeads(synced)
+  localStorage.setItem('jonnovative_crm_enriched_version', ENRICHED_DATA_VERSION)
+  return synced.length
+}
+
+/** Load the merged enriched Salem dataset into localStorage, skipping duplicates. */
+export function seedFromEnrichedLeads(): number {
+  let current = getLeads()
+  const { imported } = importLeads(JSON.stringify(enrichedLeads), current)
+  if (imported.length === 0) return 0
+  saveLeads([...current, ...imported])
+  localStorage.setItem('jonnovative_crm_enriched_version', ENRICHED_DATA_VERSION)
+  return imported.length
+}
+
+/** Sync enriched dataset or seed on first visit. */
+export function seedEnrichedLeadsIfEmpty(): number {
+  if (getLeads().length === 0) return seedFromEnrichedLeads()
+  return syncEnrichedDataset()
+}
+
+/** @deprecated Use seedFromEnrichedLeads */
+export function seedFromDerDataFiles(): number {
+  return seedFromEnrichedLeads()
+}
+
+/** @deprecated Use seedEnrichedLeadsIfEmpty */
 export function seedDerDataIfEmpty(): number {
-  if (getLeads().length > 0) return 0
-  return seedFromDerDataFiles()
+  return seedEnrichedLeadsIfEmpty()
 }
 
 export function listDerSeedFiles(): string[] {
-  return Object.keys(derSeedFiles).map((p) => p.replace('./derData/', ''))
+  return ['salem-leads.enriched.json']
 }
+
+export function getEnrichedLeadCount(): number {
+  return enrichedLeads.length
+}
+
+export { matchKey }

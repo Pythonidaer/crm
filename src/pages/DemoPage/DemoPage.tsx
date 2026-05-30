@@ -7,19 +7,12 @@ import { LeadCard } from '../../components/LeadCard'
 import { LeadFilters } from '../../components/LeadFilters'
 import { EmptyState } from '../../components/EmptyState'
 import { MOCK_LEADS } from '../../utils/mockLeadData'
-import { filterLeads } from '../../utils/leadFilters'
+import { filterLeads, EMPTY_LEAD_FILTERS } from '../../utils/leadFilters'
 import { sortLeads } from '../../utils/leadSorting'
 import type { LeadFilters as LeadFiltersType, LeadSortKey } from '../../types/lead'
 import styles from './DemoPage.module.css'
 
-const EMPTY_FILTERS: LeadFiltersType = {
-  search: '',
-  city: '',
-  sector: '',
-  selector: '',
-  status: '',
-  priority: '',
-}
+const EMPTY_FILTERS = EMPTY_LEAD_FILTERS
 
 export function DemoPage() {
   const [view, setView] = useState<'table' | 'card'>('table')

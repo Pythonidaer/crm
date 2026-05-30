@@ -19,6 +19,8 @@ export function sortLeads(
     let result = 0
     if (key === 'status') {
       result = (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0)
+    } else if (key === 'leadFitScore') {
+      result = (a.leadFitScore ?? 0) - (b.leadFitScore ?? 0)
     } else {
       const aVal = (a[key] ?? '').toString().toLowerCase()
       const bVal = (b[key] ?? '').toString().toLowerCase()

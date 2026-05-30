@@ -1,6 +1,6 @@
 import { Input, Select, Button } from '@pythonidaer/ui'
 import type { LeadFilters as LeadFiltersType, Lead } from '../../types/lead'
-import { getUniqueValues } from '../../utils/leadFilters'
+import { EMPTY_LEAD_FILTERS, getUniqueValues } from '../../utils/leadFilters'
 import styles from './LeadFilters.module.css'
 
 const STATUS_OPTIONS = [
@@ -21,6 +21,31 @@ const PRIORITY_OPTIONS = [
   { value: 'high', label: 'High' },
 ]
 
+const MATCH_CONFIDENCE_OPTIONS = [
+  { value: '', label: 'All Match Confidence' },
+  { value: 'high', label: 'High' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'low', label: 'Low' },
+  { value: 'none', label: 'None' },
+]
+
+const LEAD_FIT_OPTIONS = [
+  { value: '', label: 'All Lead Fit' },
+  { value: 'strong', label: 'Strong' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'weak', label: 'Weak' },
+  { value: 'disqualified', label: 'Disqualified' },
+]
+
+const ENRICHMENT_STATUS_OPTIONS = [
+  { value: '', label: 'All Enrichment Status' },
+  { value: 'matched', label: 'Matched' },
+  { value: 'review_needed', label: 'Review Needed' },
+  { value: 'not_found', label: 'Not Found' },
+  { value: 'error', label: 'Error' },
+  { value: 'not_enriched', label: 'Not Enriched' },
+]
+
 interface LeadFiltersProps {
   filters: LeadFiltersType
   leads: Lead[]
@@ -30,19 +55,16 @@ interface LeadFiltersProps {
 export function LeadFilters({ filters, leads, onChange }: LeadFiltersProps) {
   const cities = getUniqueValues(leads, 'city')
   const sectors = getUniqueValues(leads, 'sector')
-  const selectors = getUniqueValues(leads, 'selector')
 
   function set(key: keyof LeadFiltersType, value: string) {
     onChange({ ...filters, [key]: value })
   }
 
   function clear() {
-    onChange({ search: '', city: '', sector: '', selector: '', status: '', priority: '' })
+    onChange(EMPTY_LEAD_FILTERS)
   }
 
-  const hasFilters =
-    filters.search || filters.city || filters.sector || filters.selector ||
-    filters.status || filters.priority
+  const hasFilters = Object.entries(filters).some(([, value]) => Boolean(value))
 
   return (
     <div className={styles.wrapper} role="search" aria-label="Filter leads">
@@ -83,13 +105,54 @@ export function LeadFilters({ filters, leads, onChange }: LeadFiltersProps) {
 
       <div className={styles.selectWrap}>
         <Select
-          value={filters.selector}
-          onChange={(e) => set('selector', e.target.value)}
-          aria-label="Filter by selector"
+          value={filters.matchConfidence}
+          onChange={(e) => set('matchConfidence', e.target.value)}
+          aria-label="Filter by match confidence"
+          options={MATCH_CONFIDENCE_OPTIONS}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
+          value={filters.leadFitTier}
+          onChange={(e) => set('leadFitTier', e.target.value)}
+          aria-label="Filter by lead fit tier"
+          options={LEAD_FIT_OPTIONS}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
+          value={filters.hasWebsite}
+          onChange={(e) => set('hasWebsite', e.target.value)}
+          aria-label="Filter by website availability"
           options={[
-            { value: '', label: 'All Selectors' },
-            ...selectors.map((s) => ({ value: s, label: s })),
+            { value: '', label: 'Website: Any' },
+            { value: 'yes', label: 'Has Website' },
+            { value: 'no', label: 'No Website' },
           ]}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
+          value={filters.hasPhone}
+          onChange={(e) => set('hasPhone', e.target.value)}
+          aria-label="Filter by phone availability"
+          options={[
+            { value: '', label: 'Phone: Any' },
+            { value: 'yes', label: 'Has Phone' },
+            { value: 'no', label: 'No Phone' },
+          ]}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
+          value={filters.enrichmentStatus}
+          onChange={(e) => set('enrichmentStatus', e.target.value)}
+          aria-label="Filter by enrichment status"
+          options={ENRICHMENT_STATUS_OPTIONS}
         />
       </div>
 

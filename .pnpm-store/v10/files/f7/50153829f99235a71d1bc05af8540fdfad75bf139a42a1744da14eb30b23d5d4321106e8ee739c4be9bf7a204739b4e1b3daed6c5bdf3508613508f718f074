@@ -1,0 +1,18 @@
+@import '@pythonidaer/tokens/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-md);
+  line-height: var(--line-height-body);
+  color: var(--color-text-default);
+  background-color: var(--color-bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

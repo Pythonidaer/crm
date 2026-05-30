@@ -52,8 +52,7 @@ export function ImportLeadsPage() {
     "companyName": "Example Co",
     "city": "Salem",
     "state": "MA",
-    "sector": "Manufacturing",
-    "selector": "Food Manufacturing"
+    "sector": "Manufacturing"
   }
 ]'
               style={{ fontFamily: 'var(--font-family-mono)', fontSize: 'var(--font-size-body-sm)' }}

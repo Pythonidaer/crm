@@ -1,0 +1,85 @@
+.testimonial {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.dark {
+  background-color: var(--color-surface-inverse);
+  border-color: var(--color-border-inverse);
+  color: var(--color-text-inverse);
+}
+
+.compact {
+  padding: var(--space-6);
+  gap: var(--space-5);
+}
+
+.quoteIcon {
+  color: var(--color-primary-500);
+  opacity: 0.5;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.125rem;
+}
+
+.quote {
+  margin: 0;
+}
+
+.quote p {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body);
+  color: inherit;
+  margin: 0;
+}
+
+.compact .quote p {
+  font-size: var(--font-size-body-md);
+}
+
+.dark .quote p {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-heading);
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar {
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.name {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  color: inherit;
+}
+
+.role {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-subtle);
+}
+
+.dark .role {
+  color: var(--color-text-on-inverse-muted);
+}

@@ -30,7 +30,6 @@ for (const entry of raw) {
     city: (entry.city ?? '').trim(),
     state: (entry.state ?? '').trim() || 'MA',
     sector: entry.industry ?? entry.sector ?? sector,
-    selector: (entry.selector ?? '').trim() || (entry.industry ?? entry.sector ?? sector),
     sourceUrl: entry.sourceUrl ?? sourceUrl,
   }
 

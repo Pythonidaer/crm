@@ -52,7 +52,7 @@ export function LeadDetailPage() {
         prev
           ? {
               ...prev,
-              phone: result.phone ?? prev.phone,
+              phoneNumber: result.phone ?? prev.phoneNumber,
               website: result.website ?? prev.website,
             }
           : prev,

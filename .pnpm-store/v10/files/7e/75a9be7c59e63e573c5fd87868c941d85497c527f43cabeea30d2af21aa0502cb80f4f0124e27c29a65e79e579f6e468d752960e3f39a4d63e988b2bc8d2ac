@@ -1,0 +1,861 @@
+"use strict";
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __reExport = (target, mod, secondTarget) => (__copyProps(target, mod, "default"), secondTarget && __copyProps(secondTarget, mod, "default"));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.ts
+var index_exports = {};
+__export(index_exports, {
+  Box: () => Box,
+  Button: () => Button,
+  Card: () => Card,
+  CaseStudyCard: () => CaseStudyCard,
+  Checkbox: () => Checkbox,
+  Container: () => Container,
+  Footer: () => Footer,
+  FormField: () => FormField,
+  Input: () => Input,
+  LogoCloud: () => LogoCloud,
+  Navigation: () => Navigation,
+  PricingCard: () => PricingCard,
+  Select: () => Select,
+  Stack: () => Stack,
+  StatsBlock: () => StatsBlock,
+  Testimonial: () => Testimonial,
+  Text: () => Text,
+  TextArea: () => TextArea
+});
+module.exports = __toCommonJS(index_exports);
+
+// src/theme/typography.ts
+var typography_exports = {};
+__reExport(typography_exports, require("@pythonidaer/tokens"));
+
+// src/index.ts
+__reExport(index_exports, typography_exports, module.exports);
+
+// src/primitives/Box/Box.tsx
+var import_react = require("react");
+var import_Box = __toESM(require("./Box.module-BF57L2NN.module.css"));
+
+// src/utils/clsx.ts
+function clsx(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+// src/primitives/Box/Box.tsx
+var import_jsx_runtime = require("react/jsx-runtime");
+function BoxInner({ as, className, children, ...rest }, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Element, { ref, className: clsx(import_Box.default.box, className), ...rest, children });
+}
+var Box = (0, import_react.forwardRef)(BoxInner);
+
+// src/primitives/Text/Text.tsx
+var import_react2 = require("react");
+var import_Text = __toESM(require("./Text.module-MHN5J4C4.module.css"));
+var import_jsx_runtime2 = require("react/jsx-runtime");
+var variantToElement = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  "body-large": "p",
+  body: "p",
+  small: "small"
+};
+function TextInner({ as, variant = "body", className, children, ...rest }, ref) {
+  const Element = as ?? variantToElement[variant];
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+    Element,
+    {
+      ref,
+      className: clsx(import_Text.default.text, import_Text.default[variant.replace("-", "_")], className),
+      ...rest,
+      children
+    }
+  );
+}
+var Text = (0, import_react2.forwardRef)(TextInner);
+
+// src/primitives/Stack/Stack.tsx
+var import_react3 = require("react");
+var import_Stack = __toESM(require("./Stack.module-R5NRBWOM.module.css"));
+var import_jsx_runtime3 = require("react/jsx-runtime");
+function StackInner({
+  as,
+  direction = "column",
+  align,
+  justify,
+  gap,
+  wrap = false,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+    Element,
+    {
+      ref,
+      className: clsx(
+        import_Stack.default.stack,
+        import_Stack.default[`direction_${direction}`],
+        align && import_Stack.default[`align_${align}`],
+        justify && import_Stack.default[`justify_${justify}`],
+        gap !== void 0 && import_Stack.default[`gap_${gap}`],
+        wrap && import_Stack.default.wrap,
+        className
+      ),
+      ...rest,
+      children
+    }
+  );
+}
+var Stack = (0, import_react3.forwardRef)(StackInner);
+
+// src/primitives/Container/Container.tsx
+var import_react4 = require("react");
+var import_Container = __toESM(require("./Container.module-PGGH57D4.module.css"));
+var import_jsx_runtime4 = require("react/jsx-runtime");
+function ContainerInner({ as, size = "xl", className, children, ...rest }, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+    Element,
+    {
+      ref,
+      className: clsx(import_Container.default.container, import_Container.default[`size_${size}`], className),
+      ...rest,
+      children
+    }
+  );
+}
+var Container = (0, import_react4.forwardRef)(ContainerInner);
+
+// src/components/Button/Button.tsx
+var import_react5 = require("react");
+var import_Button = __toESM(require("./Button.module-YGGAAJJH.module.css"));
+var import_jsx_runtime5 = require("react/jsx-runtime");
+var Button = (0, import_react5.forwardRef)(function Button2({
+  variant = "primary",
+  size = "md",
+  loading = false,
+  disabled,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const isDisabled = disabled || loading;
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
+    "button",
+    {
+      ref,
+      className: clsx(
+        import_Button.default.button,
+        import_Button.default[`variant_${variant}`],
+        import_Button.default[`size_${size}`],
+        loading && import_Button.default.loading,
+        className
+      ),
+      disabled: isDisabled,
+      "aria-disabled": isDisabled,
+      "aria-busy": loading,
+      ...rest,
+      children: [
+        loading && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: import_Button.default.spinner, "aria-hidden": "true" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: loading ? import_Button.default.loadingText : void 0, children })
+      ]
+    }
+  );
+});
+
+// src/components/Card/Card.tsx
+var import_react6 = require("react");
+var import_Card = __toESM(require("./Card.module-GABK2ZD4.module.css"));
+var import_jsx_runtime6 = require("react/jsx-runtime");
+function CardInner({
+  as,
+  variant = "default",
+  padding = "md",
+  hoverable = false,
+  interactive = false,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+    Element,
+    {
+      ref,
+      className: clsx(
+        import_Card.default.card,
+        import_Card.default[`variant_${variant}`],
+        import_Card.default[`padding_${padding}`],
+        hoverable && import_Card.default.hoverable,
+        interactive && import_Card.default.interactive,
+        className
+      ),
+      ...interactive ? { role: "button", tabIndex: 0 } : {},
+      ...rest,
+      children
+    }
+  );
+}
+var Card = (0, import_react6.forwardRef)(CardInner);
+
+// src/components/Checkbox/Checkbox.tsx
+var import_react7 = require("react");
+var import_Checkbox = __toESM(require("./Checkbox.module-QXMOK5XW.module.css"));
+var import_jsx_runtime7 = require("react/jsx-runtime");
+var Checkbox = (0, import_react7.forwardRef)(function Checkbox2({ label, error = false, className, id, ...rest }, ref) {
+  const autoId = (0, import_react7.useId)();
+  const checkboxId = id ?? autoId;
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { htmlFor: checkboxId, className: clsx(import_Checkbox.default.wrapper, rest.disabled && import_Checkbox.default.wrapperDisabled, className), children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+      "input",
+      {
+        ref,
+        id: checkboxId,
+        type: "checkbox",
+        className: clsx(import_Checkbox.default.checkbox, error && import_Checkbox.default.error),
+        "aria-invalid": error || void 0,
+        ...rest
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: import_Checkbox.default.label, children: label })
+  ] });
+});
+
+// src/components/FormField/FormField.tsx
+var import_react8 = require("react");
+var import_FormField = __toESM(require("./FormField.module-KBKRMOJ2.module.css"));
+var import_jsx_runtime8 = require("react/jsx-runtime");
+function FormField({
+  label,
+  htmlFor,
+  error,
+  hint,
+  required = false,
+  className,
+  children,
+  ...rest
+}) {
+  const hintId = (0, import_react8.useId)();
+  const errorId = (0, import_react8.useId)();
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(
+    "div",
+    {
+      className: clsx(import_FormField.default.field, error && import_FormField.default.hasError, className),
+      ...rest,
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("label", { htmlFor, className: import_FormField.default.label, children: [
+          label,
+          required && /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { className: import_FormField.default.required, "aria-hidden": "true", children: [
+            " ",
+            "*"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: import_FormField.default.control, children }),
+        hint && !error && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { id: hintId, className: import_FormField.default.hint, children: hint }),
+        error && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { id: errorId, className: import_FormField.default.error, role: "alert", "aria-live": "polite", children: error })
+      ]
+    }
+  );
+}
+
+// src/components/Input/Input.tsx
+var import_react9 = require("react");
+var import_Input = __toESM(require("./Input.module-7RP5F6NZ.module.css"));
+var import_jsx_runtime9 = require("react/jsx-runtime");
+var Input = (0, import_react9.forwardRef)(function Input2({ size = "md", error = false, className, ...rest }, ref) {
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    "input",
+    {
+      ref,
+      className: clsx(
+        import_Input.default.input,
+        import_Input.default[`size_${size}`],
+        error && import_Input.default.error,
+        className
+      ),
+      "aria-invalid": error || void 0,
+      ...rest
+    }
+  );
+});
+
+// src/components/Select/Select.tsx
+var import_react10 = require("react");
+var import_Select = __toESM(require("./Select.module-HW7FLQT5.module.css"));
+var import_jsx_runtime10 = require("react/jsx-runtime");
+var Select = (0, import_react10.forwardRef)(function Select2({ size = "md", error = false, options, placeholder, className, children, ...rest }, ref) {
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: import_Select.default.wrapper, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+      "select",
+      {
+        ref,
+        className: clsx(
+          import_Select.default.select,
+          import_Select.default[`size_${size}`],
+          error && import_Select.default.error,
+          className
+        ),
+        "aria-invalid": error || void 0,
+        ...rest,
+        children: [
+          placeholder && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("option", { value: "", disabled: true, children: placeholder }),
+          options ? options.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("option", { value: opt.value, disabled: opt.disabled, children: opt.label }, opt.value)) : children
+        ]
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: import_Select.default.chevron, "aria-hidden": "true" })
+  ] });
+});
+
+// src/components/TextArea/TextArea.tsx
+var import_react11 = require("react");
+var import_TextArea = __toESM(require("./TextArea.module-LG6OLLIN.module.css"));
+var import_jsx_runtime11 = require("react/jsx-runtime");
+var TextArea = (0, import_react11.forwardRef)(function TextArea2({ error = false, className, ...rest }, ref) {
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+    "textarea",
+    {
+      ref,
+      className: clsx(import_TextArea.default.textarea, error && import_TextArea.default.error, className),
+      "aria-invalid": error || void 0,
+      rows: 4,
+      ...rest
+    }
+  );
+});
+
+// src/patterns/CaseStudyCard/CaseStudyCard.tsx
+var import_react12 = require("react");
+var import_CaseStudyCard = __toESM(require("./CaseStudyCard.module-JOCTLU7B.module.css"));
+var import_jsx_runtime12 = require("react/jsx-runtime");
+function CaseStudyCard({
+  title,
+  summary,
+  metrics,
+  imageSrc,
+  imageAlt,
+  tags,
+  ctaLabel = "Read case study",
+  ctaHref,
+  featured = false,
+  compact = false,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+    "article",
+    {
+      className: clsx(
+        import_CaseStudyCard.default.card,
+        featured && import_CaseStudyCard.default.featured,
+        compact && import_CaseStudyCard.default.compact,
+        className
+      ),
+      ...rest,
+      children: [
+        imageSrc && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: import_CaseStudyCard.default.imageWrapper, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+          "img",
+          {
+            src: imageSrc,
+            alt: imageAlt ?? title,
+            className: import_CaseStudyCard.default.image
+          }
+        ) }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: import_CaseStudyCard.default.body, children: [
+          tags && tags.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("ul", { className: import_CaseStudyCard.default.tags, role: "list", "aria-label": "Tags", children: tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("li", { className: import_CaseStudyCard.default.tag, children: tag }, tag)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { className: import_CaseStudyCard.default.title, children: title }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: import_CaseStudyCard.default.summary, children: summary }),
+          metrics && metrics.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("dl", { className: import_CaseStudyCard.default.metrics, "aria-label": "Key metrics", children: metrics.map((m) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: import_CaseStudyCard.default.metric, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("dd", { className: import_CaseStudyCard.default.metricValue, children: m.value }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("dt", { className: import_CaseStudyCard.default.metricLabel, children: m.label })
+          ] }, m.label)) }),
+          ctaHref && /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("a", { href: ctaHref, className: import_CaseStudyCard.default.cta, "aria-label": `${ctaLabel}: ${title}`, children: [
+            ctaLabel,
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { "aria-hidden": "true", children: " \u2192" })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+
+// src/patterns/Footer/Footer.tsx
+var import_react13 = require("react");
+var import_Footer = __toESM(require("./Footer.module-WHHR7THV.module.css"));
+var import_jsx_runtime13 = require("react/jsx-runtime");
+function Footer({
+  logo,
+  tagline,
+  columns,
+  legalLinks,
+  copyright = `\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} Jonnovative Designs. All rights reserved.`,
+  newsletter = false,
+  onNewsletterSubmit,
+  variant = "multi-column",
+  className,
+  ...rest
+}) {
+  const [email, setEmail] = (0, import_react13.useState)("");
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    onNewsletterSubmit?.(email);
+    setEmail("");
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("footer", { className: clsx(import_Footer.default.footer, className), ...rest, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: import_Footer.default.inner, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: import_Footer.default.brand, children: [
+        logo && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: import_Footer.default.logo, children: logo }),
+        tagline && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: import_Footer.default.tagline, children: tagline }),
+        (newsletter || variant === "newsletter") && /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+          "form",
+          {
+            onSubmit: handleNewsletterSubmit,
+            className: import_Footer.default.newsletter,
+            "aria-label": "Newsletter sign-up",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("label", { htmlFor: "footer-newsletter-email", className: import_Footer.default.newsletterLabel, children: "Subscribe to our newsletter" }),
+              /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: import_Footer.default.newsletterRow, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+                  "input",
+                  {
+                    id: "footer-newsletter-email",
+                    type: "email",
+                    value: email,
+                    onChange: (e) => setEmail(e.target.value),
+                    placeholder: "your@email.com",
+                    className: import_Footer.default.newsletterInput,
+                    required: true,
+                    "aria-label": "Email address for newsletter",
+                    autoComplete: "email"
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Button, { type: "submit", variant: "primary", size: "sm", children: "Subscribe" })
+              ] })
+            ]
+          }
+        )
+      ] }),
+      columns && columns.length > 0 && variant !== "simple" && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("nav", { "aria-label": "Footer navigation", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: import_Footer.default.columns, children: columns.map((col) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: import_Footer.default.column, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h3", { className: import_Footer.default.columnHeading, children: col.heading }),
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("ul", { role: "list", className: import_Footer.default.columnLinks, children: col.links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("a", { href: link.href, className: import_Footer.default.footerLink, children: link.label }) }, link.href)) })
+      ] }, col.heading)) }) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: import_Footer.default.legal, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: import_Footer.default.copyright, children: copyright }),
+      legalLinks && legalLinks.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("nav", { "aria-label": "Legal links", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("ul", { role: "list", className: import_Footer.default.legalLinks, children: legalLinks.map((link) => /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("a", { href: link.href, className: import_Footer.default.legalLink, children: link.label }) }, link.href)) }) })
+    ] })
+  ] });
+}
+
+// src/patterns/LogoCloud/LogoCloud.tsx
+var import_react14 = require("react");
+var import_LogoCloud = __toESM(require("./LogoCloud.module-3GFP2ZYV.module.css"));
+var import_jsx_runtime14 = require("react/jsx-runtime");
+function LogoCloud({ logos, title, columns = 4, className, ...rest }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: clsx(import_LogoCloud.default.cloud, className), ...rest, children: [
+    title && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: import_LogoCloud.default.title, children: title }),
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+      "ul",
+      {
+        className: clsx(import_LogoCloud.default.grid, import_LogoCloud.default[`cols_${columns}`]),
+        role: "list",
+        "aria-label": title ?? "Partner logos",
+        children: logos.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("li", { className: import_LogoCloud.default.item, children: logo.href ? /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+          "a",
+          {
+            href: logo.href,
+            className: import_LogoCloud.default.link,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": `Visit ${logo.alt}`,
+            children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+              "img",
+              {
+                src: logo.src,
+                alt: logo.alt,
+                className: import_LogoCloud.default.logo,
+                width: logo.width ?? 120,
+                height: logo.height ?? 40
+              }
+            )
+          }
+        ) : /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+          "img",
+          {
+            src: logo.src,
+            alt: logo.alt,
+            className: import_LogoCloud.default.logo,
+            width: logo.width ?? 120,
+            height: logo.height ?? 40
+          }
+        ) }, logo.src))
+      }
+    )
+  ] });
+}
+
+// src/patterns/Navigation/Navigation.tsx
+var import_react15 = require("react");
+var import_focus_trap_react = __toESM(require("focus-trap-react"));
+var import_Navigation = __toESM(require("./Navigation.module-FTQ5A5G3.module.css"));
+var import_jsx_runtime15 = require("react/jsx-runtime");
+function Navigation({
+  logo,
+  links,
+  variant = "split",
+  ctaLabel,
+  onCtaClick,
+  className,
+  ...rest
+}) {
+  const [mobileOpen, setMobileOpen] = (0, import_react15.useState)(false);
+  const drawerId = (0, import_react15.useId)();
+  const closeDrawer = (0, import_react15.useCallback)(() => setMobileOpen(false), []);
+  (0, import_react15.useEffect)(() => {
+    if (!mobileOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeDrawer();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileOpen, closeDrawer]);
+  (0, import_react15.useEffect)(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+    "header",
+    {
+      className: clsx(import_Navigation.default.header, import_Navigation.default[`variant_${variant}`], className),
+      ...rest,
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("nav", { className: import_Navigation.default.nav, "aria-label": "Main navigation", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: import_Navigation.default.logoSlot, children: logo }),
+          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("ul", { className: import_Navigation.default.desktopLinks, role: "list", children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+            "a",
+            {
+              href: link.href,
+              className: clsx(import_Navigation.default.navLink, link.current && import_Navigation.default.navLinkActive),
+              "aria-current": link.current ? "page" : void 0,
+              children: link.label
+            }
+          ) }, link.href)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: import_Navigation.default.actions, children: [
+            ctaLabel && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+              Button,
+              {
+                variant: "primary",
+                size: "sm",
+                onClick: onCtaClick,
+                className: import_Navigation.default.desktopCta,
+                children: ctaLabel
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+              "button",
+              {
+                type: "button",
+                className: import_Navigation.default.hamburger,
+                "aria-expanded": mobileOpen,
+                "aria-controls": drawerId,
+                "aria-label": mobileOpen ? "Close navigation menu" : "Open navigation menu",
+                onClick: () => setMobileOpen((v) => !v),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: clsx(import_Navigation.default.hamburgerLine, mobileOpen && import_Navigation.default.hamburgerLineTop) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: clsx(import_Navigation.default.hamburgerLine, mobileOpen && import_Navigation.default.hamburgerLineMiddle) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: clsx(import_Navigation.default.hamburgerLine, mobileOpen && import_Navigation.default.hamburgerLineBottom) })
+                ]
+              }
+            )
+          ] })
+        ] }),
+        mobileOpen && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+          import_focus_trap_react.default,
+          {
+            focusTrapOptions: {
+              onDeactivate: closeDrawer,
+              clickOutsideDeactivates: true,
+              escapeDeactivates: true,
+              // Fallback required for jsdom/test environments where tabbable detection can fail
+              fallbackFocus: () => document.querySelector("[data-focus-trap-fallback]") ?? document.body
+            },
+            children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+              "div",
+              {
+                id: drawerId,
+                className: import_Navigation.default.drawer,
+                role: "dialog",
+                "aria-modal": "true",
+                "aria-label": "Navigation menu",
+                children: /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("nav", { "aria-label": "Mobile navigation", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    "button",
+                    {
+                      type: "button",
+                      "data-focus-trap-fallback": true,
+                      className: import_Navigation.default.drawerClose,
+                      onClick: closeDrawer,
+                      "aria-label": "Close navigation menu",
+                      children: "\u2715"
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("ul", { className: import_Navigation.default.drawerLinks, role: "list", children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    "a",
+                    {
+                      href: link.href,
+                      className: clsx(import_Navigation.default.drawerLink, link.current && import_Navigation.default.navLinkActive),
+                      "aria-current": link.current ? "page" : void 0,
+                      onClick: closeDrawer,
+                      children: link.label
+                    }
+                  ) }, link.href)) }),
+                  ctaLabel && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    Button,
+                    {
+                      variant: "primary",
+                      size: "md",
+                      className: import_Navigation.default.drawerCta,
+                      onClick: () => {
+                        onCtaClick?.();
+                        closeDrawer();
+                      },
+                      children: ctaLabel
+                    }
+                  )
+                ] })
+              }
+            )
+          }
+        ),
+        mobileOpen && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+          "div",
+          {
+            className: import_Navigation.default.backdrop,
+            "aria-hidden": "true",
+            onClick: closeDrawer
+          }
+        )
+      ]
+    }
+  );
+}
+
+// src/patterns/PricingCard/PricingCard.tsx
+var import_react16 = require("react");
+var import_PricingCard = __toESM(require("./PricingCard.module-YR52PTV4.module.css"));
+var import_jsx_runtime16 = require("react/jsx-runtime");
+function PricingCard({
+  title,
+  price,
+  billingPeriod = "/month",
+  description,
+  features,
+  ctaLabel,
+  onCtaClick,
+  featured = false,
+  badge,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+    "div",
+    {
+      className: clsx(import_PricingCard.default.card, featured && import_PricingCard.default.featured, className),
+      "aria-label": featured ? `${title} \u2014 Recommended plan` : title,
+      ...rest,
+      children: [
+        badge && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: import_PricingCard.default.badge, "aria-label": `Plan badge: ${badge}`, children: badge }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: import_PricingCard.default.header, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h3", { className: import_PricingCard.default.title, children: title }),
+          description && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("p", { className: import_PricingCard.default.description, children: description })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: import_PricingCard.default.pricing, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: import_PricingCard.default.price, children: price }),
+          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: import_PricingCard.default.period, children: billingPeriod })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("ul", { className: import_PricingCard.default.features, role: "list", "aria-label": `${title} features`, children: features.map((feature) => /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+          "li",
+          {
+            className: clsx(import_PricingCard.default.feature, !feature.included && import_PricingCard.default.featureExcluded),
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: import_PricingCard.default.featureIcon, "aria-hidden": "true", children: feature.included ? "\u2713" : "\u2715" }),
+              /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                "span",
+                {
+                  className: import_PricingCard.default.featureText,
+                  "aria-label": feature.included ? feature.text : `Not included: ${feature.text}`,
+                  children: feature.text
+                }
+              )
+            ]
+          },
+          feature.text
+        )) }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+          Button,
+          {
+            variant: featured ? "primary" : "outline",
+            size: "lg",
+            className: import_PricingCard.default.cta,
+            onClick: onCtaClick,
+            "aria-label": `${ctaLabel} \u2014 ${title} plan`,
+            children: ctaLabel
+          }
+        )
+      ]
+    }
+  );
+}
+
+// src/patterns/StatsBlock/StatsBlock.tsx
+var import_react17 = require("react");
+var import_StatsBlock = __toESM(require("./StatsBlock.module-BO37BWJM.module.css"));
+var import_jsx_runtime17 = require("react/jsx-runtime");
+function StatsBlock({ stats, columns = 3, className, ...rest }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+    "dl",
+    {
+      className: clsx(import_StatsBlock.default.block, import_StatsBlock.default[`cols_${columns}`], className),
+      ...rest,
+      children: stats.map((stat) => /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+        "div",
+        {
+          className: clsx(import_StatsBlock.default.stat, stat.highlighted && import_StatsBlock.default.highlighted),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("dd", { className: import_StatsBlock.default.value, children: stat.value }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("dt", { className: import_StatsBlock.default.label, children: stat.label }),
+            stat.description && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("p", { className: import_StatsBlock.default.description, children: stat.description })
+          ]
+        },
+        stat.label
+      ))
+    }
+  );
+}
+
+// src/patterns/Testimonial/Testimonial.tsx
+var import_react18 = require("react");
+var import_Testimonial = __toESM(require("./Testimonial.module-SIXNMNFX.module.css"));
+var import_jsx_runtime18 = require("react/jsx-runtime");
+function Testimonial({
+  quote,
+  name,
+  title,
+  company,
+  avatarSrc,
+  avatarAlt,
+  dark = false,
+  compact = false,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+    "figure",
+    {
+      className: clsx(
+        import_Testimonial.default.testimonial,
+        dark && import_Testimonial.default.dark,
+        compact && import_Testimonial.default.compact,
+        className
+      ),
+      ...rest,
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+          "svg",
+          {
+            className: import_Testimonial.default.quoteIcon,
+            width: "32",
+            height: "24",
+            viewBox: "0 0 32 24",
+            fill: "none",
+            "aria-hidden": "true",
+            children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+              "path",
+              {
+                d: "M0 24V14.4C0 10.56 1.04 7.36 3.12 4.8C5.28 2.24 8.24 0.64 12 0L13.44 2.64C11.04 3.2 9.12 4.4 7.68 6.24C6.32 8 5.68 9.92 5.76 12H11.04V24H0ZM20.96 24V14.4C20.96 10.56 22 7.36 24.08 4.8C26.24 2.24 29.2 0.64 32.96 0L34.4 2.64C32 3.2 30.08 4.4 28.64 6.24C27.28 8 26.64 9.92 26.72 12H32V24H20.96Z",
+                fill: "currentColor"
+              }
+            )
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("blockquote", { className: import_Testimonial.default.quote, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { children: quote }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("figcaption", { className: import_Testimonial.default.attribution, children: [
+          avatarSrc && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+            "img",
+            {
+              src: avatarSrc,
+              alt: avatarAlt ?? `${name}'s avatar`,
+              className: import_Testimonial.default.avatar,
+              width: compact ? 36 : 48,
+              height: compact ? 36 : 48
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: import_Testimonial.default.info, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: import_Testimonial.default.name, children: name }),
+            /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("span", { className: import_Testimonial.default.role, children: [
+              title,
+              company && `, ${company}`
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  Box,
+  Button,
+  Card,
+  CaseStudyCard,
+  Checkbox,
+  Container,
+  Footer,
+  FormField,
+  Input,
+  LogoCloud,
+  Navigation,
+  PricingCard,
+  Select,
+  Stack,
+  StatsBlock,
+  Testimonial,
+  Text,
+  TextArea
+});
+//# sourceMappingURL=index.js.map

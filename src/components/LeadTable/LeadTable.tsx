@@ -3,6 +3,7 @@ import { Button } from '@pythonidaer/ui'
 import { LinkButton } from '../LinkButton'
 import { LeadStatusBadge } from '../LeadStatusBadge'
 import type { Lead, LeadSortKey } from '../../types/lead'
+import { formatEnrichmentStatus, formatPhone } from '../../utils/leadFilters'
 import styles from './LeadTable.module.css'
 
 interface LeadTableProps {
@@ -16,12 +17,16 @@ interface LeadTableProps {
 }
 
 const COLUMNS: { key: LeadSortKey | null; label: string }[] = [
-  { key: 'companyName', label: 'Company Name' },
+  { key: 'displayName', label: 'Company Name' },
   { key: null, label: 'Address' },
   { key: 'city', label: 'City' },
   { key: null, label: 'State' },
   { key: 'sector', label: 'Sector' },
-  { key: null, label: 'Selector' },
+  { key: null, label: 'Phone' },
+  { key: null, label: 'Website' },
+  { key: null, label: 'Match Confidence' },
+  { key: 'leadFitScore', label: 'Lead Fit' },
+  { key: null, label: 'Enrichment Status' },
   { key: 'status', label: 'Status' },
   { key: null, label: 'Priority' },
   { key: 'nextFollowUpAt', label: 'Next Follow Up' },
@@ -44,6 +49,60 @@ function PriorityLabel({ priority }: { priority: Lead['priority'] }) {
   return (
     <span className={cls}>
       {priority.charAt(0).toUpperCase() + priority.slice(1)}
+    </span>
+  )
+}
+
+function MatchConfidenceLabel({
+  confidence,
+  score,
+}: {
+  confidence: Lead['matchConfidence']
+  score: Lead['matchScore']
+}) {
+  if (!confidence) return <span className={styles.muted}>—</span>
+  const cls =
+    confidence === 'high'
+      ? styles.matchHigh
+      : confidence === 'medium'
+        ? styles.matchMedium
+        : styles.matchLow
+  const label = confidence.charAt(0).toUpperCase() + confidence.slice(1)
+  return (
+    <span className={cls}>
+      {label}
+      {typeof score === 'number' ? ` (${score})` : ''}
+    </span>
+  )
+}
+
+function EnrichmentStatusLabel({ status }: { status: Lead['enrichmentStatus'] }) {
+  const value = formatEnrichmentStatus(status)
+  const cls =
+    value === 'matched'
+      ? styles.enrichmentMatched
+      : value === 'review_needed'
+        ? styles.enrichmentReview
+        : value === 'not_found' || value === 'error'
+          ? styles.enrichmentMissing
+          : styles.enrichmentPending
+  return <span className={cls}>{value.replace(/_/g, ' ')}</span>
+}
+
+function LeadFitLabel({ lead }: { lead: Lead }) {
+  const tier = lead.leadFitTier ?? 'weak'
+  const score = lead.leadFitScore ?? 0
+  const cls =
+    tier === 'strong'
+      ? styles.fitStrong
+      : tier === 'medium'
+        ? styles.fitMedium
+        : tier === 'disqualified'
+          ? styles.fitDisqualified
+          : styles.fitWeak
+  return (
+    <span className={cls} title={lead.disqualificationReason ?? undefined}>
+      {tier.charAt(0).toUpperCase() + tier.slice(1)} ({score})
     </span>
   )
 }
@@ -98,10 +157,10 @@ export function LeadTable({
             <tr key={lead.id} className={styles.tr}>
               <td className={`${styles.td} ${styles.companyName}`}>
                 {readOnly ? (
-                  lead.companyName
+                  lead.displayName
                 ) : (
                   <Link to={`${basePath}/${lead.id}`} className={styles.companyLink}>
-                    {lead.companyName}
+                    {lead.displayName}
                   </Link>
                 )}
               </td>
@@ -109,7 +168,28 @@ export function LeadTable({
               <td className={styles.td}>{lead.city}</td>
               <td className={styles.td}>{lead.state}</td>
               <td className={styles.td}>{lead.sector}</td>
-              <td className={styles.td}>{lead.selector}</td>
+              <td className={styles.td}>{formatPhone(lead)}</td>
+              <td className={`${styles.td} ${styles.muted}`}>
+                {lead.website ? (
+                  <a href={lead.website} target="_blank" rel="noreferrer noopener">
+                    Website
+                  </a>
+                ) : (
+                  '—'
+                )}
+              </td>
+              <td className={styles.td}>
+                <MatchConfidenceLabel
+                  confidence={lead.matchConfidence}
+                  score={lead.matchScore}
+                />
+              </td>
+              <td className={styles.td}>
+                <LeadFitLabel lead={lead} />
+              </td>
+              <td className={styles.td}>
+                <EnrichmentStatusLabel status={lead.enrichmentStatus} />
+              </td>
               <td className={styles.td}>
                 <LeadStatusBadge status={lead.status} />
               </td>
@@ -134,7 +214,7 @@ export function LeadTable({
                       variant="ghost"
                       size="sm"
                       onClick={() => onDelete(lead.id)}
-                      aria-label={`Delete ${lead.companyName}`}
+                      aria-label={`Delete ${lead.displayName}`}
                       style={{ color: 'var(--color-error-600)' }}
                     >
                       Delete

@@ -52,7 +52,7 @@ To import it:
 ]
 ```
 
-All other fields (`address`, `sector`, `selector`, `phone`, `website`, `status`, `priority`, etc.) are optional and receive safe defaults.
+All other fields (`address`, `sector`, `phone`, `website`, `status`, `priority`, etc.) are optional and receive safe defaults.
 
 ### Full lead shape
 
@@ -64,9 +64,11 @@ All other fields (`address`, `sector`, `selector`, `phone`, `website`, `status`,
   city: string
   state: string             // default: "MA"
   sector: string
-  selector: string
-  phone: string
-  website: string
+  phoneNumber: string | null
+  website: string | null
+  matchConfidence: "high" | "medium" | "low" | null
+  leadFitScore: number
+  leadFitTier: "strong" | "medium" | "weak" | "disqualified"
   status: "not_contacted" | "called" | "interested" | "follow_up" | "proposal_sent" | "won" | "lost"
   priority: "low" | "medium" | "high"
   contactName: string
@@ -104,22 +106,80 @@ Use this to back up your data or transfer it to another device.
 
 ## Google Places Enrichment
 
-The `enrichLeadWithPlaces(lead)` utility in `src/utils/placesEnrichment.ts` is designed for future enrichment of lead data (phone, website, formatted address, Google Maps URL).
+Local batch enrichment uses the **Google Places API (New)** via [`scripts/enrich-google-places.js`](scripts/enrich-google-places.js). It reads DER lead JSON from `src/utils/derData/` and writes enriched output to `src/utils/enrichedData/` **without modifying the original DER files**.
 
-### Current behavior
+### Data model notes
 
-- If no `VITE_GOOGLE_PLACES_KEY` environment variable is set, **mocked data** is returned for known demo leads.
-- The enrichment panel on the lead detail page shows a notice that the API key is not configured.
+- **`sector`** is the real DER business sector and is kept in the CRM, filters, and table.
+- **`selector`** was redundant and has been removed from the CRM model, UI, filters, and exports. Legacy DER source files may still contain a `selector` field; it is ignored on import.
 
-### Adding live enrichment (future)
+### What enrichment provides
 
-> **Do NOT call the Google Places API directly from the browser in production.** The API key will be exposed in network requests.
+- Phone number, website, Google Maps URL, Google Place ID, and business status (when Google has them)
+- **Email is not expected from Google Places** — output sets `email` to `null` unless the input row already had one
+- Match confidence scoring routes results into separate output files (see below)
 
-The correct approach:
+### Setup
 
-1. Create a serverless/edge function (Vercel, Netlify, Cloudflare Workers, etc.) that accepts `{ companyName, city, address }` and proxies the Places API call.
-2. Store `VITE_GOOGLE_PLACES_KEY` only for local development with a key that has strict referrer/IP restrictions.
-3. Update `enrichLeadWithPlaces` to call your backend proxy instead.
+1. Copy [`.env.example`](.env.example) to `.env.local` (gitignored).
+2. Set `GOOGLE_MAPS_API_KEY=` with a key restricted by **IP** for local script use.
+3. Enable **Places API (New)** in Google Cloud Console.
+
+### Commands
+
+```bash
+pnpm enrich:places:dry-run              # first 10 leads, logs only, no file writes
+pnpm enrich:places -- --limit=10        # enrich 10 leads and write output files
+pnpm enrich:places -- --limit=25        # test a larger batch
+pnpm enrich:places                      # all ~2,219 DER leads
+pnpm enrich:places -- --force --limit=5 # re-enrich even if googlePlaceId exists
+```
+
+CLI flags: `--dry-run`, `--limit=N`, `--force`, `--delay=MS` (default 250), `--write` (allow writes during dry run).
+
+### Output files
+
+| File | Contents |
+|------|----------|
+| `src/utils/enrichedData/google-places-enriched.json` | High-confidence matches with phone/website populated |
+| `src/utils/enrichedData/google-places-review-needed.json` | Medium/low confidence — review before trusting contact fields |
+| `src/utils/enrichedData/google-places-not-found.json` | No Google result for the search query |
+| `src/utils/enrichedData/google-places-errors.json` | API or parse failures |
+
+### Billing warning
+
+There are **~2,219 DER leads**. Each lead uses **2 API calls** (Text Search + Place Details), so a full run is roughly **~4,400 billable requests**. Always test with `pnpm enrich:places:dry-run` or `--limit=10` first and check your Google Cloud billing dashboard before running the full batch.
+
+### In-app enrichment (separate)
+
+The `enrichLeadWithPlaces(lead)` utility in `src/utils/placesEnrichment.ts` still returns mocked data in the browser. The CRM list now loads the merged enriched dataset below.
+
+---
+
+## Merged CRM Dataset
+
+After Google Places enrichment, merge DER source data with enrichment output into one app-ready file:
+
+```bash
+pnpm merge:leads
+```
+
+### Data pipeline
+
+| Stage | Location | Purpose |
+|-------|----------|---------|
+| Raw DER source | `src/utils/derData/salem-*.json` | Original employer locator exports (unchanged) |
+| Enrichment output | `src/utils/enrichedData/google-places-*.json` | Google Places API results by confidence bucket |
+| App-ready CRM data | `src/utils/leads/salem-leads.enriched.json` | Merged, scored leads used by the CRM |
+
+### Terminology
+
+- **`sector`** — real DER business sector (kept everywhere)
+- **`selector`** — removed from the CRM model; legacy DER files may still contain it
+- **Match confidence** — how sure we are the Google Places match is correct (`high`, `medium`, `low`)
+- **Lead fit score / tier** — how worth contacting the business is for outreach (`strong`, `medium`, `weak`, `disqualified`)
+
+The CRM auto-seeds from `salem-leads.enriched.json` on first load when localStorage is empty.
 
 ---
 
@@ -184,7 +244,10 @@ src/
 │   ├── leadStorage.ts
 │   ├── leadValidation.ts
 │   ├── mockLeadData.ts
-│   └── placesEnrichment.ts
+│   ├── placesEnrichment.ts
+│   ├── derData/            # DER source JSON (read-only)
+│   ├── enrichedData/       # Google Places enrichment output
+│   └── leads/              # Merged app-ready CRM dataset
 └── styles/             # Global CSS
 ```
 

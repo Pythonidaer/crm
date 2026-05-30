@@ -88,3 +88,17 @@
 .priorityHigh { color: var(--color-error-600); font-weight: var(--font-weight-semibold); }
 .priorityMedium { color: var(--color-warning-700); }
 .priorityLow { color: var(--color-text-muted); }
+
+.matchHigh { color: var(--color-success-700); font-weight: var(--font-weight-semibold); }
+.matchMedium { color: var(--color-warning-700); }
+.matchLow { color: var(--color-text-muted); }
+
+.fitStrong { color: var(--color-success-700); font-weight: var(--font-weight-semibold); }
+.fitMedium { color: var(--color-warning-700); }
+.fitWeak { color: var(--color-text-muted); }
+.fitDisqualified { color: var(--color-error-600); }
+
+.enrichmentMatched { color: var(--color-success-700); font-weight: var(--font-weight-semibold); }
+.enrichmentReview { color: var(--color-warning-700); }
+.enrichmentMissing { color: var(--color-error-600); }
+.enrichmentPending { color: var(--color-text-muted); }

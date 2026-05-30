@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { LeadFilters } from '../components/LeadFilters'
 import { MOCK_LEADS } from '../utils/mockLeadData'
-import type { LeadFilters as LeadFiltersType } from '../types/lead'
+import { EMPTY_LEAD_FILTERS } from '../utils/leadFilters'
 
 const meta = {
   title: 'CRM/LeadFilters',
@@ -14,9 +14,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 function Interactive() {
-  const [filters, setFilters] = useState<LeadFiltersType>({
-    search: '', city: '', sector: '', selector: '', status: '', priority: '',
-  })
+  const [filters, setFilters] = useState(EMPTY_LEAD_FILTERS)
   return (
     <div style={{ padding: '16px', background: 'var(--color-bg-subtle)' }}>
       <LeadFilters filters={filters} leads={MOCK_LEADS} onChange={setFilters} />

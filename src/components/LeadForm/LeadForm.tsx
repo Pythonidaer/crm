@@ -93,27 +93,20 @@ export function LeadForm({ lead, onSave, onCancel }: LeadFormProps) {
               onChange={(e) => set('sector', e.target.value)}
             />
           </FormField>
-          <FormField label="Selector" htmlFor="selector">
+          <FormField label="Phone" htmlFor="phoneNumber">
             <Input
-              id="selector"
-              value={draft.selector}
-              onChange={(e) => set('selector', e.target.value)}
-            />
-          </FormField>
-          <FormField label="Phone" htmlFor="phone">
-            <Input
-              id="phone"
+              id="phoneNumber"
               type="tel"
-              value={draft.phone}
-              onChange={(e) => set('phone', e.target.value)}
+              value={draft.phoneNumber ?? ''}
+              onChange={(e) => set('phoneNumber', e.target.value || null)}
             />
           </FormField>
           <FormField label="Website" htmlFor="website">
             <Input
               id="website"
               type="url"
-              value={draft.website}
-              onChange={(e) => set('website', e.target.value)}
+              value={draft.website ?? ''}
+              onChange={(e) => set('website', e.target.value || null)}
             />
           </FormField>
         </div>

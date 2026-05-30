@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Card, Button } from '@pythonidaer/ui'
 import { LinkButton } from '../LinkButton'
 import { LeadStatusBadge } from '../LeadStatusBadge'
+import { formatEnrichmentStatus, formatPhone } from '../../utils/leadFilters'
 import type { Lead } from '../../types/lead'
 import styles from './LeadCard.module.css'
 
@@ -30,10 +31,10 @@ export function LeadCard({ lead, basePath = '/crm/leads', readOnly = false, onDe
       <div className={styles.card}>
         <div className={styles.header}>
           {readOnly ? (
-            <span className={styles.companyName}>{lead.companyName}</span>
+            <span className={styles.companyName}>{lead.displayName}</span>
           ) : (
             <Link to={`${basePath}/${lead.id}`} className={styles.companyName}>
-              {lead.companyName}
+              {lead.displayName}
             </Link>
           )}
           <div className={styles.badges}>
@@ -47,7 +48,16 @@ export function LeadCard({ lead, basePath = '/crm/leads', readOnly = false, onDe
         <div className={styles.meta}>
           <span>{lead.address || '—'}, {lead.city}, {lead.state}</span>
           {lead.sector && <span>{lead.sector}</span>}
-          {lead.selector && <span>{lead.selector}</span>}
+          {(lead.phoneNumber || lead.internationalPhoneNumber) && (
+            <span>{formatPhone(lead)}</span>
+          )}
+          {lead.matchConfidence && (
+            <span>
+              Match: {lead.matchConfidence}
+              {typeof lead.matchScore === 'number' ? ` (${lead.matchScore})` : ''}
+            </span>
+          )}
+          <span>Enrichment: {formatEnrichmentStatus(lead.enrichmentStatus).replace(/_/g, ' ')}</span>
         </div>
 
         {lead.notes && (

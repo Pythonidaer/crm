@@ -1,0 +1,848 @@
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __reExport = (target, mod, secondTarget) => (__copyProps(target, mod, "default"), secondTarget && __copyProps(secondTarget, mod, "default"));
+
+// src/index.ts
+var index_exports = {};
+__export(index_exports, {
+  Box: () => Box,
+  Button: () => Button,
+  Card: () => Card,
+  CaseStudyCard: () => CaseStudyCard,
+  Checkbox: () => Checkbox,
+  Container: () => Container,
+  Footer: () => Footer,
+  FormField: () => FormField,
+  Input: () => Input,
+  LogoCloud: () => LogoCloud,
+  Navigation: () => Navigation,
+  PricingCard: () => PricingCard,
+  Select: () => Select,
+  Stack: () => Stack,
+  StatsBlock: () => StatsBlock,
+  Testimonial: () => Testimonial,
+  Text: () => Text,
+  TextArea: () => TextArea
+});
+
+// src/theme/typography.ts
+var typography_exports = {};
+__reExport(typography_exports, tokens_star);
+import * as tokens_star from "@pythonidaer/tokens";
+
+// src/index.ts
+__reExport(index_exports, typography_exports);
+
+// src/primitives/Box/Box.tsx
+import { forwardRef } from "react";
+import styles from "./Box.module-BF57L2NN.module.css";
+
+// src/utils/clsx.ts
+function clsx(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+// src/primitives/Box/Box.tsx
+import { jsx } from "react/jsx-runtime";
+function BoxInner({ as, className, children, ...rest }, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ jsx(Element, { ref, className: clsx(styles.box, className), ...rest, children });
+}
+var Box = forwardRef(BoxInner);
+
+// src/primitives/Text/Text.tsx
+import { forwardRef as forwardRef2 } from "react";
+import styles2 from "./Text.module-MHN5J4C4.module.css";
+import { jsx as jsx2 } from "react/jsx-runtime";
+var variantToElement = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  "body-large": "p",
+  body: "p",
+  small: "small"
+};
+function TextInner({ as, variant = "body", className, children, ...rest }, ref) {
+  const Element = as ?? variantToElement[variant];
+  return /* @__PURE__ */ jsx2(
+    Element,
+    {
+      ref,
+      className: clsx(styles2.text, styles2[variant.replace("-", "_")], className),
+      ...rest,
+      children
+    }
+  );
+}
+var Text = forwardRef2(TextInner);
+
+// src/primitives/Stack/Stack.tsx
+import { forwardRef as forwardRef3 } from "react";
+import styles3 from "./Stack.module-R5NRBWOM.module.css";
+import { jsx as jsx3 } from "react/jsx-runtime";
+function StackInner({
+  as,
+  direction = "column",
+  align,
+  justify,
+  gap,
+  wrap = false,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ jsx3(
+    Element,
+    {
+      ref,
+      className: clsx(
+        styles3.stack,
+        styles3[`direction_${direction}`],
+        align && styles3[`align_${align}`],
+        justify && styles3[`justify_${justify}`],
+        gap !== void 0 && styles3[`gap_${gap}`],
+        wrap && styles3.wrap,
+        className
+      ),
+      ...rest,
+      children
+    }
+  );
+}
+var Stack = forwardRef3(StackInner);
+
+// src/primitives/Container/Container.tsx
+import { forwardRef as forwardRef4 } from "react";
+import styles4 from "./Container.module-PGGH57D4.module.css";
+import { jsx as jsx4 } from "react/jsx-runtime";
+function ContainerInner({ as, size = "xl", className, children, ...rest }, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ jsx4(
+    Element,
+    {
+      ref,
+      className: clsx(styles4.container, styles4[`size_${size}`], className),
+      ...rest,
+      children
+    }
+  );
+}
+var Container = forwardRef4(ContainerInner);
+
+// src/components/Button/Button.tsx
+import { forwardRef as forwardRef5 } from "react";
+import styles5 from "./Button.module-YGGAAJJH.module.css";
+import { jsx as jsx5, jsxs } from "react/jsx-runtime";
+var Button = forwardRef5(function Button2({
+  variant = "primary",
+  size = "md",
+  loading = false,
+  disabled,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const isDisabled = disabled || loading;
+  return /* @__PURE__ */ jsxs(
+    "button",
+    {
+      ref,
+      className: clsx(
+        styles5.button,
+        styles5[`variant_${variant}`],
+        styles5[`size_${size}`],
+        loading && styles5.loading,
+        className
+      ),
+      disabled: isDisabled,
+      "aria-disabled": isDisabled,
+      "aria-busy": loading,
+      ...rest,
+      children: [
+        loading && /* @__PURE__ */ jsx5("span", { className: styles5.spinner, "aria-hidden": "true" }),
+        /* @__PURE__ */ jsx5("span", { className: loading ? styles5.loadingText : void 0, children })
+      ]
+    }
+  );
+});
+
+// src/components/Card/Card.tsx
+import { forwardRef as forwardRef6 } from "react";
+import styles6 from "./Card.module-GABK2ZD4.module.css";
+import { jsx as jsx6 } from "react/jsx-runtime";
+function CardInner({
+  as,
+  variant = "default",
+  padding = "md",
+  hoverable = false,
+  interactive = false,
+  className,
+  children,
+  ...rest
+}, ref) {
+  const Element = as ?? "div";
+  return /* @__PURE__ */ jsx6(
+    Element,
+    {
+      ref,
+      className: clsx(
+        styles6.card,
+        styles6[`variant_${variant}`],
+        styles6[`padding_${padding}`],
+        hoverable && styles6.hoverable,
+        interactive && styles6.interactive,
+        className
+      ),
+      ...interactive ? { role: "button", tabIndex: 0 } : {},
+      ...rest,
+      children
+    }
+  );
+}
+var Card = forwardRef6(CardInner);
+
+// src/components/Checkbox/Checkbox.tsx
+import { forwardRef as forwardRef7, useId } from "react";
+import styles7 from "./Checkbox.module-QXMOK5XW.module.css";
+import { jsx as jsx7, jsxs as jsxs2 } from "react/jsx-runtime";
+var Checkbox = forwardRef7(function Checkbox2({ label, error = false, className, id, ...rest }, ref) {
+  const autoId = useId();
+  const checkboxId = id ?? autoId;
+  return /* @__PURE__ */ jsxs2("label", { htmlFor: checkboxId, className: clsx(styles7.wrapper, rest.disabled && styles7.wrapperDisabled, className), children: [
+    /* @__PURE__ */ jsx7(
+      "input",
+      {
+        ref,
+        id: checkboxId,
+        type: "checkbox",
+        className: clsx(styles7.checkbox, error && styles7.error),
+        "aria-invalid": error || void 0,
+        ...rest
+      }
+    ),
+    /* @__PURE__ */ jsx7("span", { className: styles7.label, children: label })
+  ] });
+});
+
+// src/components/FormField/FormField.tsx
+import { useId as useId2 } from "react";
+import styles8 from "./FormField.module-KBKRMOJ2.module.css";
+import { jsx as jsx8, jsxs as jsxs3 } from "react/jsx-runtime";
+function FormField({
+  label,
+  htmlFor,
+  error,
+  hint,
+  required = false,
+  className,
+  children,
+  ...rest
+}) {
+  const hintId = useId2();
+  const errorId = useId2();
+  return /* @__PURE__ */ jsxs3(
+    "div",
+    {
+      className: clsx(styles8.field, error && styles8.hasError, className),
+      ...rest,
+      children: [
+        /* @__PURE__ */ jsxs3("label", { htmlFor, className: styles8.label, children: [
+          label,
+          required && /* @__PURE__ */ jsxs3("span", { className: styles8.required, "aria-hidden": "true", children: [
+            " ",
+            "*"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsx8("div", { className: styles8.control, children }),
+        hint && !error && /* @__PURE__ */ jsx8("p", { id: hintId, className: styles8.hint, children: hint }),
+        error && /* @__PURE__ */ jsx8("p", { id: errorId, className: styles8.error, role: "alert", "aria-live": "polite", children: error })
+      ]
+    }
+  );
+}
+
+// src/components/Input/Input.tsx
+import { forwardRef as forwardRef8 } from "react";
+import styles9 from "./Input.module-7RP5F6NZ.module.css";
+import { jsx as jsx9 } from "react/jsx-runtime";
+var Input = forwardRef8(function Input2({ size = "md", error = false, className, ...rest }, ref) {
+  return /* @__PURE__ */ jsx9(
+    "input",
+    {
+      ref,
+      className: clsx(
+        styles9.input,
+        styles9[`size_${size}`],
+        error && styles9.error,
+        className
+      ),
+      "aria-invalid": error || void 0,
+      ...rest
+    }
+  );
+});
+
+// src/components/Select/Select.tsx
+import { forwardRef as forwardRef9 } from "react";
+import styles10 from "./Select.module-HW7FLQT5.module.css";
+import { jsx as jsx10, jsxs as jsxs4 } from "react/jsx-runtime";
+var Select = forwardRef9(function Select2({ size = "md", error = false, options, placeholder, className, children, ...rest }, ref) {
+  return /* @__PURE__ */ jsxs4("div", { className: styles10.wrapper, children: [
+    /* @__PURE__ */ jsxs4(
+      "select",
+      {
+        ref,
+        className: clsx(
+          styles10.select,
+          styles10[`size_${size}`],
+          error && styles10.error,
+          className
+        ),
+        "aria-invalid": error || void 0,
+        ...rest,
+        children: [
+          placeholder && /* @__PURE__ */ jsx10("option", { value: "", disabled: true, children: placeholder }),
+          options ? options.map((opt) => /* @__PURE__ */ jsx10("option", { value: opt.value, disabled: opt.disabled, children: opt.label }, opt.value)) : children
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsx10("span", { className: styles10.chevron, "aria-hidden": "true" })
+  ] });
+});
+
+// src/components/TextArea/TextArea.tsx
+import { forwardRef as forwardRef10 } from "react";
+import styles11 from "./TextArea.module-LG6OLLIN.module.css";
+import { jsx as jsx11 } from "react/jsx-runtime";
+var TextArea = forwardRef10(function TextArea2({ error = false, className, ...rest }, ref) {
+  return /* @__PURE__ */ jsx11(
+    "textarea",
+    {
+      ref,
+      className: clsx(styles11.textarea, error && styles11.error, className),
+      "aria-invalid": error || void 0,
+      rows: 4,
+      ...rest
+    }
+  );
+});
+
+// src/patterns/CaseStudyCard/CaseStudyCard.tsx
+import "react";
+import styles12 from "./CaseStudyCard.module-JOCTLU7B.module.css";
+import { jsx as jsx12, jsxs as jsxs5 } from "react/jsx-runtime";
+function CaseStudyCard({
+  title,
+  summary,
+  metrics,
+  imageSrc,
+  imageAlt,
+  tags,
+  ctaLabel = "Read case study",
+  ctaHref,
+  featured = false,
+  compact = false,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ jsxs5(
+    "article",
+    {
+      className: clsx(
+        styles12.card,
+        featured && styles12.featured,
+        compact && styles12.compact,
+        className
+      ),
+      ...rest,
+      children: [
+        imageSrc && /* @__PURE__ */ jsx12("div", { className: styles12.imageWrapper, children: /* @__PURE__ */ jsx12(
+          "img",
+          {
+            src: imageSrc,
+            alt: imageAlt ?? title,
+            className: styles12.image
+          }
+        ) }),
+        /* @__PURE__ */ jsxs5("div", { className: styles12.body, children: [
+          tags && tags.length > 0 && /* @__PURE__ */ jsx12("ul", { className: styles12.tags, role: "list", "aria-label": "Tags", children: tags.map((tag) => /* @__PURE__ */ jsx12("li", { className: styles12.tag, children: tag }, tag)) }),
+          /* @__PURE__ */ jsx12("h3", { className: styles12.title, children: title }),
+          /* @__PURE__ */ jsx12("p", { className: styles12.summary, children: summary }),
+          metrics && metrics.length > 0 && /* @__PURE__ */ jsx12("dl", { className: styles12.metrics, "aria-label": "Key metrics", children: metrics.map((m) => /* @__PURE__ */ jsxs5("div", { className: styles12.metric, children: [
+            /* @__PURE__ */ jsx12("dd", { className: styles12.metricValue, children: m.value }),
+            /* @__PURE__ */ jsx12("dt", { className: styles12.metricLabel, children: m.label })
+          ] }, m.label)) }),
+          ctaHref && /* @__PURE__ */ jsxs5("a", { href: ctaHref, className: styles12.cta, "aria-label": `${ctaLabel}: ${title}`, children: [
+            ctaLabel,
+            /* @__PURE__ */ jsx12("span", { "aria-hidden": "true", children: " \u2192" })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+
+// src/patterns/Footer/Footer.tsx
+import { useState } from "react";
+import styles13 from "./Footer.module-WHHR7THV.module.css";
+import { jsx as jsx13, jsxs as jsxs6 } from "react/jsx-runtime";
+function Footer({
+  logo,
+  tagline,
+  columns,
+  legalLinks,
+  copyright = `\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} Jonnovative Designs. All rights reserved.`,
+  newsletter = false,
+  onNewsletterSubmit,
+  variant = "multi-column",
+  className,
+  ...rest
+}) {
+  const [email, setEmail] = useState("");
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    onNewsletterSubmit?.(email);
+    setEmail("");
+  };
+  return /* @__PURE__ */ jsxs6("footer", { className: clsx(styles13.footer, className), ...rest, children: [
+    /* @__PURE__ */ jsxs6("div", { className: styles13.inner, children: [
+      /* @__PURE__ */ jsxs6("div", { className: styles13.brand, children: [
+        logo && /* @__PURE__ */ jsx13("div", { className: styles13.logo, children: logo }),
+        tagline && /* @__PURE__ */ jsx13("p", { className: styles13.tagline, children: tagline }),
+        (newsletter || variant === "newsletter") && /* @__PURE__ */ jsxs6(
+          "form",
+          {
+            onSubmit: handleNewsletterSubmit,
+            className: styles13.newsletter,
+            "aria-label": "Newsletter sign-up",
+            children: [
+              /* @__PURE__ */ jsx13("label", { htmlFor: "footer-newsletter-email", className: styles13.newsletterLabel, children: "Subscribe to our newsletter" }),
+              /* @__PURE__ */ jsxs6("div", { className: styles13.newsletterRow, children: [
+                /* @__PURE__ */ jsx13(
+                  "input",
+                  {
+                    id: "footer-newsletter-email",
+                    type: "email",
+                    value: email,
+                    onChange: (e) => setEmail(e.target.value),
+                    placeholder: "your@email.com",
+                    className: styles13.newsletterInput,
+                    required: true,
+                    "aria-label": "Email address for newsletter",
+                    autoComplete: "email"
+                  }
+                ),
+                /* @__PURE__ */ jsx13(Button, { type: "submit", variant: "primary", size: "sm", children: "Subscribe" })
+              ] })
+            ]
+          }
+        )
+      ] }),
+      columns && columns.length > 0 && variant !== "simple" && /* @__PURE__ */ jsx13("nav", { "aria-label": "Footer navigation", children: /* @__PURE__ */ jsx13("div", { className: styles13.columns, children: columns.map((col) => /* @__PURE__ */ jsxs6("div", { className: styles13.column, children: [
+        /* @__PURE__ */ jsx13("h3", { className: styles13.columnHeading, children: col.heading }),
+        /* @__PURE__ */ jsx13("ul", { role: "list", className: styles13.columnLinks, children: col.links.map((link) => /* @__PURE__ */ jsx13("li", { children: /* @__PURE__ */ jsx13("a", { href: link.href, className: styles13.footerLink, children: link.label }) }, link.href)) })
+      ] }, col.heading)) }) })
+    ] }),
+    /* @__PURE__ */ jsxs6("div", { className: styles13.legal, children: [
+      /* @__PURE__ */ jsx13("p", { className: styles13.copyright, children: copyright }),
+      legalLinks && legalLinks.length > 0 && /* @__PURE__ */ jsx13("nav", { "aria-label": "Legal links", children: /* @__PURE__ */ jsx13("ul", { role: "list", className: styles13.legalLinks, children: legalLinks.map((link) => /* @__PURE__ */ jsx13("li", { children: /* @__PURE__ */ jsx13("a", { href: link.href, className: styles13.legalLink, children: link.label }) }, link.href)) }) })
+    ] })
+  ] });
+}
+
+// src/patterns/LogoCloud/LogoCloud.tsx
+import "react";
+import styles14 from "./LogoCloud.module-3GFP2ZYV.module.css";
+import { jsx as jsx14, jsxs as jsxs7 } from "react/jsx-runtime";
+function LogoCloud({ logos, title, columns = 4, className, ...rest }) {
+  return /* @__PURE__ */ jsxs7("div", { className: clsx(styles14.cloud, className), ...rest, children: [
+    title && /* @__PURE__ */ jsx14("p", { className: styles14.title, children: title }),
+    /* @__PURE__ */ jsx14(
+      "ul",
+      {
+        className: clsx(styles14.grid, styles14[`cols_${columns}`]),
+        role: "list",
+        "aria-label": title ?? "Partner logos",
+        children: logos.map((logo) => /* @__PURE__ */ jsx14("li", { className: styles14.item, children: logo.href ? /* @__PURE__ */ jsx14(
+          "a",
+          {
+            href: logo.href,
+            className: styles14.link,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": `Visit ${logo.alt}`,
+            children: /* @__PURE__ */ jsx14(
+              "img",
+              {
+                src: logo.src,
+                alt: logo.alt,
+                className: styles14.logo,
+                width: logo.width ?? 120,
+                height: logo.height ?? 40
+              }
+            )
+          }
+        ) : /* @__PURE__ */ jsx14(
+          "img",
+          {
+            src: logo.src,
+            alt: logo.alt,
+            className: styles14.logo,
+            width: logo.width ?? 120,
+            height: logo.height ?? 40
+          }
+        ) }, logo.src))
+      }
+    )
+  ] });
+}
+
+// src/patterns/Navigation/Navigation.tsx
+import { useState as useState2, useEffect, useCallback, useId as useId3 } from "react";
+import FocusTrap from "focus-trap-react";
+import styles15 from "./Navigation.module-FTQ5A5G3.module.css";
+import { jsx as jsx15, jsxs as jsxs8 } from "react/jsx-runtime";
+function Navigation({
+  logo,
+  links,
+  variant = "split",
+  ctaLabel,
+  onCtaClick,
+  className,
+  ...rest
+}) {
+  const [mobileOpen, setMobileOpen] = useState2(false);
+  const drawerId = useId3();
+  const closeDrawer = useCallback(() => setMobileOpen(false), []);
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeDrawer();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileOpen, closeDrawer]);
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+  return /* @__PURE__ */ jsxs8(
+    "header",
+    {
+      className: clsx(styles15.header, styles15[`variant_${variant}`], className),
+      ...rest,
+      children: [
+        /* @__PURE__ */ jsxs8("nav", { className: styles15.nav, "aria-label": "Main navigation", children: [
+          /* @__PURE__ */ jsx15("div", { className: styles15.logoSlot, children: logo }),
+          /* @__PURE__ */ jsx15("ul", { className: styles15.desktopLinks, role: "list", children: links.map((link) => /* @__PURE__ */ jsx15("li", { children: /* @__PURE__ */ jsx15(
+            "a",
+            {
+              href: link.href,
+              className: clsx(styles15.navLink, link.current && styles15.navLinkActive),
+              "aria-current": link.current ? "page" : void 0,
+              children: link.label
+            }
+          ) }, link.href)) }),
+          /* @__PURE__ */ jsxs8("div", { className: styles15.actions, children: [
+            ctaLabel && /* @__PURE__ */ jsx15(
+              Button,
+              {
+                variant: "primary",
+                size: "sm",
+                onClick: onCtaClick,
+                className: styles15.desktopCta,
+                children: ctaLabel
+              }
+            ),
+            /* @__PURE__ */ jsxs8(
+              "button",
+              {
+                type: "button",
+                className: styles15.hamburger,
+                "aria-expanded": mobileOpen,
+                "aria-controls": drawerId,
+                "aria-label": mobileOpen ? "Close navigation menu" : "Open navigation menu",
+                onClick: () => setMobileOpen((v) => !v),
+                children: [
+                  /* @__PURE__ */ jsx15("span", { className: clsx(styles15.hamburgerLine, mobileOpen && styles15.hamburgerLineTop) }),
+                  /* @__PURE__ */ jsx15("span", { className: clsx(styles15.hamburgerLine, mobileOpen && styles15.hamburgerLineMiddle) }),
+                  /* @__PURE__ */ jsx15("span", { className: clsx(styles15.hamburgerLine, mobileOpen && styles15.hamburgerLineBottom) })
+                ]
+              }
+            )
+          ] })
+        ] }),
+        mobileOpen && /* @__PURE__ */ jsx15(
+          FocusTrap,
+          {
+            focusTrapOptions: {
+              onDeactivate: closeDrawer,
+              clickOutsideDeactivates: true,
+              escapeDeactivates: true,
+              // Fallback required for jsdom/test environments where tabbable detection can fail
+              fallbackFocus: () => document.querySelector("[data-focus-trap-fallback]") ?? document.body
+            },
+            children: /* @__PURE__ */ jsx15(
+              "div",
+              {
+                id: drawerId,
+                className: styles15.drawer,
+                role: "dialog",
+                "aria-modal": "true",
+                "aria-label": "Navigation menu",
+                children: /* @__PURE__ */ jsxs8("nav", { "aria-label": "Mobile navigation", children: [
+                  /* @__PURE__ */ jsx15(
+                    "button",
+                    {
+                      type: "button",
+                      "data-focus-trap-fallback": true,
+                      className: styles15.drawerClose,
+                      onClick: closeDrawer,
+                      "aria-label": "Close navigation menu",
+                      children: "\u2715"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx15("ul", { className: styles15.drawerLinks, role: "list", children: links.map((link) => /* @__PURE__ */ jsx15("li", { children: /* @__PURE__ */ jsx15(
+                    "a",
+                    {
+                      href: link.href,
+                      className: clsx(styles15.drawerLink, link.current && styles15.navLinkActive),
+                      "aria-current": link.current ? "page" : void 0,
+                      onClick: closeDrawer,
+                      children: link.label
+                    }
+                  ) }, link.href)) }),
+                  ctaLabel && /* @__PURE__ */ jsx15(
+                    Button,
+                    {
+                      variant: "primary",
+                      size: "md",
+                      className: styles15.drawerCta,
+                      onClick: () => {
+                        onCtaClick?.();
+                        closeDrawer();
+                      },
+                      children: ctaLabel
+                    }
+                  )
+                ] })
+              }
+            )
+          }
+        ),
+        mobileOpen && /* @__PURE__ */ jsx15(
+          "div",
+          {
+            className: styles15.backdrop,
+            "aria-hidden": "true",
+            onClick: closeDrawer
+          }
+        )
+      ]
+    }
+  );
+}
+
+// src/patterns/PricingCard/PricingCard.tsx
+import "react";
+import styles16 from "./PricingCard.module-YR52PTV4.module.css";
+import { jsx as jsx16, jsxs as jsxs9 } from "react/jsx-runtime";
+function PricingCard({
+  title,
+  price,
+  billingPeriod = "/month",
+  description,
+  features,
+  ctaLabel,
+  onCtaClick,
+  featured = false,
+  badge,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ jsxs9(
+    "div",
+    {
+      className: clsx(styles16.card, featured && styles16.featured, className),
+      "aria-label": featured ? `${title} \u2014 Recommended plan` : title,
+      ...rest,
+      children: [
+        badge && /* @__PURE__ */ jsx16("div", { className: styles16.badge, "aria-label": `Plan badge: ${badge}`, children: badge }),
+        /* @__PURE__ */ jsxs9("div", { className: styles16.header, children: [
+          /* @__PURE__ */ jsx16("h3", { className: styles16.title, children: title }),
+          description && /* @__PURE__ */ jsx16("p", { className: styles16.description, children: description })
+        ] }),
+        /* @__PURE__ */ jsxs9("div", { className: styles16.pricing, children: [
+          /* @__PURE__ */ jsx16("span", { className: styles16.price, children: price }),
+          /* @__PURE__ */ jsx16("span", { className: styles16.period, children: billingPeriod })
+        ] }),
+        /* @__PURE__ */ jsx16("ul", { className: styles16.features, role: "list", "aria-label": `${title} features`, children: features.map((feature) => /* @__PURE__ */ jsxs9(
+          "li",
+          {
+            className: clsx(styles16.feature, !feature.included && styles16.featureExcluded),
+            children: [
+              /* @__PURE__ */ jsx16("span", { className: styles16.featureIcon, "aria-hidden": "true", children: feature.included ? "\u2713" : "\u2715" }),
+              /* @__PURE__ */ jsx16(
+                "span",
+                {
+                  className: styles16.featureText,
+                  "aria-label": feature.included ? feature.text : `Not included: ${feature.text}`,
+                  children: feature.text
+                }
+              )
+            ]
+          },
+          feature.text
+        )) }),
+        /* @__PURE__ */ jsx16(
+          Button,
+          {
+            variant: featured ? "primary" : "outline",
+            size: "lg",
+            className: styles16.cta,
+            onClick: onCtaClick,
+            "aria-label": `${ctaLabel} \u2014 ${title} plan`,
+            children: ctaLabel
+          }
+        )
+      ]
+    }
+  );
+}
+
+// src/patterns/StatsBlock/StatsBlock.tsx
+import "react";
+import styles17 from "./StatsBlock.module-BO37BWJM.module.css";
+import { jsx as jsx17, jsxs as jsxs10 } from "react/jsx-runtime";
+function StatsBlock({ stats, columns = 3, className, ...rest }) {
+  return /* @__PURE__ */ jsx17(
+    "dl",
+    {
+      className: clsx(styles17.block, styles17[`cols_${columns}`], className),
+      ...rest,
+      children: stats.map((stat) => /* @__PURE__ */ jsxs10(
+        "div",
+        {
+          className: clsx(styles17.stat, stat.highlighted && styles17.highlighted),
+          children: [
+            /* @__PURE__ */ jsx17("dd", { className: styles17.value, children: stat.value }),
+            /* @__PURE__ */ jsx17("dt", { className: styles17.label, children: stat.label }),
+            stat.description && /* @__PURE__ */ jsx17("p", { className: styles17.description, children: stat.description })
+          ]
+        },
+        stat.label
+      ))
+    }
+  );
+}
+
+// src/patterns/Testimonial/Testimonial.tsx
+import "react";
+import styles18 from "./Testimonial.module-SIXNMNFX.module.css";
+import { jsx as jsx18, jsxs as jsxs11 } from "react/jsx-runtime";
+function Testimonial({
+  quote,
+  name,
+  title,
+  company,
+  avatarSrc,
+  avatarAlt,
+  dark = false,
+  compact = false,
+  className,
+  ...rest
+}) {
+  return /* @__PURE__ */ jsxs11(
+    "figure",
+    {
+      className: clsx(
+        styles18.testimonial,
+        dark && styles18.dark,
+        compact && styles18.compact,
+        className
+      ),
+      ...rest,
+      children: [
+        /* @__PURE__ */ jsx18(
+          "svg",
+          {
+            className: styles18.quoteIcon,
+            width: "32",
+            height: "24",
+            viewBox: "0 0 32 24",
+            fill: "none",
+            "aria-hidden": "true",
+            children: /* @__PURE__ */ jsx18(
+              "path",
+              {
+                d: "M0 24V14.4C0 10.56 1.04 7.36 3.12 4.8C5.28 2.24 8.24 0.64 12 0L13.44 2.64C11.04 3.2 9.12 4.4 7.68 6.24C6.32 8 5.68 9.92 5.76 12H11.04V24H0ZM20.96 24V14.4C20.96 10.56 22 7.36 24.08 4.8C26.24 2.24 29.2 0.64 32.96 0L34.4 2.64C32 3.2 30.08 4.4 28.64 6.24C27.28 8 26.64 9.92 26.72 12H32V24H20.96Z",
+                fill: "currentColor"
+              }
+            )
+          }
+        ),
+        /* @__PURE__ */ jsx18("blockquote", { className: styles18.quote, children: /* @__PURE__ */ jsx18("p", { children: quote }) }),
+        /* @__PURE__ */ jsxs11("figcaption", { className: styles18.attribution, children: [
+          avatarSrc && /* @__PURE__ */ jsx18(
+            "img",
+            {
+              src: avatarSrc,
+              alt: avatarAlt ?? `${name}'s avatar`,
+              className: styles18.avatar,
+              width: compact ? 36 : 48,
+              height: compact ? 36 : 48
+            }
+          ),
+          /* @__PURE__ */ jsxs11("div", { className: styles18.info, children: [
+            /* @__PURE__ */ jsx18("span", { className: styles18.name, children: name }),
+            /* @__PURE__ */ jsxs11("span", { className: styles18.role, children: [
+              title,
+              company && `, ${company}`
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+export {
+  Box,
+  Button,
+  Card,
+  CaseStudyCard,
+  Checkbox,
+  Container,
+  Footer,
+  FormField,
+  Input,
+  LogoCloud,
+  Navigation,
+  PricingCard,
+  Select,
+  Stack,
+  StatsBlock,
+  Testimonial,
+  Text,
+  TextArea
+};
+//# sourceMappingURL=index.mjs.map
