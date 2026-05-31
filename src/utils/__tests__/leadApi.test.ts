@@ -29,6 +29,7 @@ describe('leadApi', () => {
     vi.mocked(fetch).mockResolvedValue({
       ok: false,
       status: 404,
+      headers: new Headers({ 'content-type': 'application/json' }),
       json: async () => ({ error: 'Lead not found' }),
     } as Response)
 

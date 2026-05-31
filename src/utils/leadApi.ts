@@ -17,8 +17,14 @@ async function parseJson<T>(response: Response): Promise<T> {
   if (!response.ok) {
     let message = `Request failed (${response.status})`
     try {
-      const body = (await response.json()) as { error?: string }
-      if (body.error) message = body.error
+      const contentType = response.headers.get('content-type') ?? ''
+      if (contentType.includes('application/json')) {
+        const body = (await response.json()) as { error?: string }
+        if (body.error) message = body.error
+      } else {
+        const text = (await response.text()).trim()
+        if (text) message = `${message}: ${text.slice(0, 120)}`
+      }
     } catch {
       // ignore parse errors
     }

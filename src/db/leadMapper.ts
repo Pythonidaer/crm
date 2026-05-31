@@ -1,6 +1,13 @@
 import type { LeadRow, NewLeadRow } from './schema'
-import type { Lead } from '../types/lead'
-import { applyDefaults } from '../utils/leadValidation'
+import type {
+  EmailEnrichmentStatus,
+  EnrichmentStatus,
+  Lead,
+  LeadFitTier,
+  LeadPriority,
+  LeadStatus,
+  MatchConfidence,
+} from '../types/lead'
 
 function toIsoOrEmpty(value: string | null | undefined): string {
   if (!value) return ''
@@ -11,6 +18,11 @@ function toIsoOrNull(value: string | undefined): string | null {
   if (!value) return null
   const trimmed = value.trim()
   return trimmed || null
+}
+
+function normalizeEmailsFound(value: unknown): string[] {
+  if (!Array.isArray(value)) return []
+  return value.map((entry) => String(entry).trim()).filter(Boolean)
 }
 
 export function leadToRow(lead: Lead, seedKey: string): NewLeadRow {
@@ -66,44 +78,45 @@ export function leadToRow(lead: Lead, seedKey: string): NewLeadRow {
   }
 }
 
+/** Map a DB row to the frontend Lead shape without re-scoring or validation side effects. */
 export function rowToLead(row: LeadRow): Lead {
-  return applyDefaults({
+  return {
     id: row.id,
     companyName: row.companyName,
-    displayName: row.displayName,
-    address: row.address,
+    displayName: row.displayName || row.companyName,
+    googleDisplayName: row.googleDisplayName,
+    address: row.address ?? '',
+    googleFormattedAddress: row.googleFormattedAddress,
     city: row.city,
-    state: row.state,
-    sector: row.sector,
+    state: row.state ?? 'MA',
+    sector: row.sector ?? '',
     phoneNumber: row.phoneNumber,
     internationalPhoneNumber: row.internationalPhoneNumber,
     website: row.website,
     email: row.email,
-    sourceUrl: row.sourceUrl,
-    dataSource: row.dataSource,
-    googlePlaceId: row.googlePlaceId,
-    googleDisplayName: row.googleDisplayName,
-    googleFormattedAddress: row.googleFormattedAddress,
-    googleMapsUri: row.googleMapsUri,
-    businessStatus: row.businessStatus,
-    matchConfidence: row.matchConfidence as Lead['matchConfidence'],
-    matchScore: row.matchScore,
-    enrichmentStatus: row.enrichmentStatus as Lead['enrichmentStatus'],
-    enrichmentNotes: row.enrichmentNotes,
-    lastEnrichedAt: row.lastEnrichedAt,
-    emailsFound: row.emailsFound ?? [],
+    emailsFound: normalizeEmailsFound(row.emailsFound),
     emailSourceUrl: row.emailSourceUrl,
-    emailEnrichmentStatus: row.emailEnrichmentStatus as Lead['emailEnrichmentStatus'],
+    emailEnrichmentStatus: row.emailEnrichmentStatus as EmailEnrichmentStatus | null,
     emailEnrichmentNotes: row.emailEnrichmentNotes,
     emailEnrichedAt: row.emailEnrichedAt,
-    status: row.status as Lead['status'],
-    priority: row.priority as Lead['priority'],
-    nextFollowUpAt: toIsoOrEmpty(row.nextFollowUpAt),
+    googlePlaceId: row.googlePlaceId,
+    googleMapsUri: row.googleMapsUri,
+    businessStatus: row.businessStatus,
+    matchConfidence: row.matchConfidence as MatchConfidence | null,
+    matchScore: row.matchScore,
+    enrichmentStatus: row.enrichmentStatus as EnrichmentStatus | null,
+    enrichmentNotes: row.enrichmentNotes,
+    sourceUrl: row.sourceUrl ?? '',
+    dataSource: row.dataSource ?? 'manual',
+    lastEnrichedAt: row.lastEnrichedAt,
+    status: row.status as LeadStatus,
+    priority: row.priority as LeadPriority,
+    contactName: row.contactName ?? '',
+    contactRole: row.contactRole ?? '',
+    contactEmail: row.contactEmail ?? '',
     lastContactedAt: toIsoOrEmpty(row.lastContactedAt),
-    contactName: row.contactName,
-    contactRole: row.contactRole,
-    contactEmail: row.contactEmail,
-    notes: row.notes,
+    nextFollowUpAt: toIsoOrEmpty(row.nextFollowUpAt),
+    notes: row.notes ?? '',
     qualification: {
       hasWebsite: row.hasWebsite,
       websiteNeedsWork: row.websiteNeedsWork,
@@ -113,11 +126,11 @@ export function rowToLead(row: LeadRow): Lead {
       decisionMakerFound: row.decisionMakerFound,
     },
     leadFitScore: row.leadFitScore,
-    leadFitTier: row.leadFitTier as Lead['leadFitTier'],
+    leadFitTier: row.leadFitTier as LeadFitTier,
     disqualificationReason: row.disqualificationReason,
     createdAt: row.createdAt,
     updatedAt: row.updatedAt,
-  })
+  }
 }
 
 export const PATCHABLE_LEAD_FIELDS = [

@@ -1,8 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { sql } from 'drizzle-orm'
-import { getDb } from '../src/db/client'
-import { leads } from '../src/db/schema'
-import { handleApiError, methodNotAllowed, sendJson } from '../src/server/apiUtils'
+import { handleHealthGet } from '../src/server/leadsHandlers'
+import { methodNotAllowed, sendWebResponse } from '../src/server/apiUtils'
+
+export const config = {
+  maxDuration: 60,
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   if (req.method === 'OPTIONS') {
@@ -15,11 +17,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     return
   }
 
-  try {
-    const db = getDb()
-    const [row] = await db.select({ count: sql<number>`count(*)::int` }).from(leads)
-    sendJson(res, 200, { ok: true, leads: row?.count ?? 0 })
-  } catch (err) {
-    handleApiError(res, err)
-  }
+  await sendWebResponse(res, await handleHealthGet())
 }

@@ -1,6 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { getLeads } from '../src/db/leadQueries'
-import { handleApiError, methodNotAllowed, sendJson } from '../src/server/apiUtils'
+import { handleLeadsGet } from '../src/server/leadsHandlers'
+import { methodNotAllowed, sendWebResponse } from '../src/server/apiUtils'
+
+export const config = {
+  maxDuration: 60,
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   if (req.method === 'OPTIONS') {
@@ -13,10 +17,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     return
   }
 
-  try {
-    const leads = await getLeads()
-    sendJson(res, 200, leads)
-  } catch (err) {
-    handleApiError(res, err)
-  }
+  await sendWebResponse(res, await handleLeadsGet())
 }
