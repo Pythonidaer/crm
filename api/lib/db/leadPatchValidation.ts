@@ -1,4 +1,4 @@
-import type { LeadPriority, LeadStatus } from '../../src/types/lead'
+import type { LeadPriority, LeadStatus } from '../../../src/types/lead'
 import type { LeadPatchInput } from './leadMapper'
 
 const VALID_STATUSES: LeadStatus[] = [

@@ -278,7 +278,7 @@ src/
 │   └── leads/              # Merged app-ready CRM dataset
 └── styles/             # Global CSS
 api/                    # Vercel serverless routes (/api/leads, /api/health)
-lib/                    # Server-only DB schema, queries, API handlers
+lib/                    # Server-only DB + API handlers (under api/lib/)
 scripts/                # DB seed/push and local dev API
 docs/                   # Deployment and database docs
 ```

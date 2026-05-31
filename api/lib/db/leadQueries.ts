@@ -1,7 +1,7 @@
 import { getSql } from './neonClient'
 import { patchInputToRow, rowToLead, type LeadPatchInput } from './leadMapper'
 import { normalizeLeadRow } from './leadRow'
-import type { Lead } from '../../src/types/lead'
+import type { Lead } from '../../../src/types/lead'
 
 const SELECT_LEADS = `
   SELECT

@@ -17,7 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
   }
 
   try {
-    const { countLeads, getLeadsPage } = await import('../lib/db/leadQueries')
+    const { countLeads, getLeadsPage } = await import('./lib/db/leadQueries')
     const page = Number(Array.isArray(req.query.page) ? req.query.page[0] : req.query.page) || 1
     const pageSize =
       Number(Array.isArray(req.query.pageSize) ? req.query.pageSize[0] : req.query.pageSize) || 500

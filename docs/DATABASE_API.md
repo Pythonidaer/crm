@@ -73,10 +73,10 @@ When `VITE_USE_DATABASE_LEADS` is `false` or unset, the app uses bundled JSON + 
 
 | Path | Purpose |
 |------|---------|
-| `lib/db/schema.ts` | Drizzle schema |
-| `lib/db/client.ts` | Postgres client |
-| `lib/db/leadQueries.ts` | `getLeads`, `getLeadById`, `updateLeadEditableFields` |
-| `lib/db/leadPatchValidation.ts` | PATCH body parsing/validation |
-| `lib/db/leadMapper.ts` | Row ↔ Lead mapping |
+| `api/lib/db/schema.ts` | Drizzle schema |
+| `api/lib/db/client.ts` | Postgres client |
+| `api/lib/db/leadQueries.ts` | `getLeads`, `getLeadById`, `updateLeadEditableFields` |
+| `api/lib/db/leadPatchValidation.ts` | PATCH body parsing/validation |
+| `api/lib/db/leadMapper.ts` | Row ↔ Lead mapping |
 | `api/*.ts` | Vercel serverless routes |
 | `scripts/dev-api-server.js` | Local dev API using the same query helpers |

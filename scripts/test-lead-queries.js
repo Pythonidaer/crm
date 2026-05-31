@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 dotenv.config({ path: '.env.local' })
-import { countLeads, getLeads } from '../lib/db/leadQueries.ts'
+import { countLeads, getLeads } from '../api/lib/db/leadQueries.ts'
 
 const count = await countLeads()
 console.log('count', count)

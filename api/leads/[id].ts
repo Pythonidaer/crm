@@ -24,7 +24,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
 
   try {
     if (req.method === 'GET') {
-      const { getLeadById } = await import('../../lib/db/leadQueries')
+      const { getLeadById } = await import('../lib/db/leadQueries')
       const lead = await getLeadById(id)
       if (!lead) {
         res.status(404).json({ error: 'Lead not found' })
@@ -35,8 +35,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     }
 
     if (req.method === 'PATCH') {
-      const { updateLeadEditableFields } = await import('../../lib/db/leadQueries')
-      const { parseLeadPatchBody } = await import('../../lib/db/leadPatchValidation')
+      const { updateLeadEditableFields } = await import('../lib/db/leadQueries')
+      const { parseLeadPatchBody } = await import('../lib/db/leadPatchValidation')
       const { patch, errors } = parseLeadPatchBody(req.body)
       if (errors.length > 0) {
         res.status(400).json({ error: errors.join('; ') })

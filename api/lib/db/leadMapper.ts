@@ -11,7 +11,7 @@ import type {
   LeadPriority,
   LeadStatus,
   MatchConfidence,
-} from '../../src/types/lead'
+} from '../../../src/types/lead'
 
 function toIsoOrEmpty(value: string | null | undefined): string {
   if (!value) return ''
