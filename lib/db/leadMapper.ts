@@ -1,4 +1,5 @@
-import type { LeadRow, NewLeadRow } from './schema'
+import type { LeadRow } from './leadRow'
+import type { NewLeadRow } from './schema'
 import type {
   EmailEnrichmentStatus,
   EnrichmentStatus,

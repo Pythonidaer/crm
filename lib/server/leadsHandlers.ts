@@ -1,8 +1,5 @@
-import { sql } from 'drizzle-orm'
-import { getDb } from '../db/client'
-import { getLeadById, getLeads, updateLeadEditableFields } from '../db/leadQueries'
+import { countLeads, getLeadById, getLeads, updateLeadEditableFields } from '../db/leadQueries'
 import { parseLeadPatchBody } from '../db/leadPatchValidation'
-import { leads } from '../db/schema'
 
 export interface ApiResult {
   status: number
@@ -28,9 +25,8 @@ function handleError(err: unknown): ApiResult {
 
 export async function handleHealthGet(): Promise<ApiResult> {
   try {
-    const db = getDb()
-    const [row] = await db.select({ count: sql<number>`count(*)::int` }).from(leads)
-    return ok({ ok: true, leads: row?.count ?? 0 })
+    const total = await countLeads()
+    return ok({ ok: true, leads: total })
   } catch (err) {
     return handleError(err)
   }
