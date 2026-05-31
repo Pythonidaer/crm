@@ -1,5 +1,8 @@
 import type { LeadRow } from './leadRow'
-import type { NewLeadRow } from './schema'
+
+/** Insert/update shape for seed scripts (Drizzle-free). */
+export type NewLeadRow = LeadRow & { seedKey: string }
+
 import type {
   EmailEnrichmentStatus,
   EnrichmentStatus,
