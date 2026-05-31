@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
+import { countLeads, getLeadsPage } from './lib/db/leadQueries'
 
 export const config = {
   maxDuration: 60,
@@ -17,7 +18,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
   }
 
   try {
-    const { countLeads, getLeadsPage } = await import('./lib/db/leadQueries')
     const page = Number(Array.isArray(req.query.page) ? req.query.page[0] : req.query.page) || 1
     const pageSize =
       Number(Array.isArray(req.query.pageSize) ? req.query.pageSize[0] : req.query.pageSize) || 500
@@ -34,6 +34,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       res.status(503).json({ error: 'Database not configured' })
       return
     }
-    res.status(500).json({ error: 'Internal server error', detail: message.slice(0, 200) })
+    res.status(500).json({ error: 'Internal server error' })
   }
 }
