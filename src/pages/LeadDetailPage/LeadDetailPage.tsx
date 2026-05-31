@@ -6,6 +6,12 @@ import { LeadStatusBadge } from '../../components/LeadStatusBadge'
 import { getLead, upsertLead } from '../../utils/leadStorage'
 import { applyDefaults } from '../../utils/leadValidation'
 import { enrichLeadWithPlaces, isEnrichmentAvailable } from '../../utils/placesEnrichment'
+import {
+  fetchLeadFromApi,
+  isDatabaseLeadsEnabled,
+  leadToPatchInput,
+  patchLeadViaApi,
+} from '../../utils/leadApi'
 import type { Lead } from '../../types/lead'
 import type { EnrichmentResult } from '../../utils/placesEnrichment'
 import styles from './LeadDetailPage.module.css'
@@ -18,26 +24,59 @@ export function LeadDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const isNew = id === 'new'
+  const useDatabase = isDatabaseLeadsEnabled()
 
   const [lead, setLead] = useState<Lead | null>(() => {
     if (isNew) {
       return applyDefaults({ id: generateId(), city: 'Salem', state: 'MA' })
     }
+    if (useDatabase) return null
     return getLead(id ?? '') ?? null
   })
 
+  const [loading, setLoading] = useState(useDatabase && !isNew)
+  const [loadError, setLoadError] = useState<string | null>(null)
+  const [saving, setSaving] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const [enriching, setEnriching] = useState(false)
   const [enrichResult, setEnrichResult] = useState<EnrichmentResult | null>(null)
 
   useEffect(() => {
-    if (!isNew && id) {
-      const found = getLead(id)
-      if (!found) navigate('/crm/leads')
-      else setLead(found)
-    }
-  }, [id, isNew, navigate])
+    if (isNew || !id) return
 
-  function handleSave(updated: Lead) {
+    if (useDatabase) {
+      setLoading(true)
+      setLoadError(null)
+      fetchLeadFromApi(id)
+        .then((found) => setLead(found))
+        .catch((err) => setLoadError(String(err)))
+        .finally(() => setLoading(false))
+      return
+    }
+
+    const found = getLead(id)
+    if (!found) navigate('/crm/leads')
+    else setLead(found)
+  }, [id, isNew, navigate, useDatabase])
+
+  async function handleSave(updated: Lead) {
+    setSaveError(null)
+
+    if (useDatabase && !isNew) {
+      setSaving(true)
+      try {
+        const saved = await patchLeadViaApi(updated.id, leadToPatchInput(updated))
+        setLead(saved)
+        navigate('/crm/leads')
+      } catch (err) {
+        setSaveError(String(err))
+        setLead(updated)
+      } finally {
+        setSaving(false)
+      }
+      return
+    }
+
     upsertLead(updated)
     navigate('/crm/leads')
   }
@@ -62,6 +101,18 @@ export function LeadDetailPage() {
     } finally {
       setEnriching(false)
     }
+  }
+
+  if (loading) {
+    return <p>Loading lead…</p>
+  }
+
+  if (loadError) {
+    return (
+      <p>
+        Failed to load lead: {loadError}. <Link to="/crm/leads">Go back</Link>
+      </p>
+    )
   }
 
   if (!lead) {
@@ -123,7 +174,13 @@ export function LeadDetailPage() {
       )}
 
       <Card variant="bordered" padding="lg">
-        <LeadForm lead={lead} onSave={handleSave} onCancel={() => navigate('/crm/leads')} />
+        <LeadForm
+          lead={lead}
+          onSave={handleSave}
+          onCancel={() => navigate('/crm/leads')}
+          saving={saving}
+          saveError={saveError}
+        />
       </Card>
     </div>
   )

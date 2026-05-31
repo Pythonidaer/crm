@@ -14,6 +14,14 @@ const githubPagesBase = '/crm/'
 export default defineConfig({
   base: process.env.GITHUB_PAGES === 'true' ? githubPagesBase : '/',
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      },
+    },
+  },
   test: {
     projects: [{
       extends: true,

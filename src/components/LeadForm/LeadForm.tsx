@@ -28,11 +28,13 @@ const PRIORITY_OPTIONS = [
 
 interface LeadFormProps {
   lead: Lead
-  onSave: (lead: Lead) => void
+  onSave: (lead: Lead) => void | Promise<void>
   onCancel?: () => void
+  saving?: boolean
+  saveError?: string | null
 }
 
-export function LeadForm({ lead, onSave, onCancel }: LeadFormProps) {
+export function LeadForm({ lead, onSave, onCancel, saving = false, saveError = null }: LeadFormProps) {
   const [draft, setDraft] = useState<Lead>(lead)
 
   function set<K extends keyof Lead>(key: K, value: Lead[K]) {
@@ -245,12 +247,17 @@ export function LeadForm({ lead, onSave, onCancel }: LeadFormProps) {
       </section>
 
       <div className={styles.actions}>
+        {saveError && (
+          <p role="alert" style={{ color: 'var(--color-danger, #b42318)', marginRight: 'auto' }}>
+            {saveError}
+          </p>
+        )}
         {onCancel && (
-          <Button type="button" variant="outline" onClick={onCancel}>
+          <Button type="button" variant="outline" onClick={onCancel} disabled={saving}>
             Cancel
           </Button>
         )}
-        <Button type="submit" variant="primary">
+        <Button type="submit" variant="primary" loading={saving} disabled={saving}>
           Save Lead
         </Button>
       </div>

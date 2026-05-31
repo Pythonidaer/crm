@@ -10,6 +10,7 @@ import { filterLeads, EMPTY_LEAD_FILTERS, hasEmail } from '../../utils/leadFilte
 import { sortLeads } from '../../utils/leadSorting'
 import { applyDefaults } from '../../utils/leadValidation'
 import { seedEnrichedLeadsIfEmpty } from '../../utils/derSeedLoader'
+import { fetchLeadsFromApi, isDatabaseLeadsEnabled } from '../../utils/leadApi'
 import { MOCK_LEADS } from '../../utils/mockLeadData'
 import type { Lead, LeadFilters as LeadFiltersType, LeadSortKey } from '../../types/lead'
 import styles from './LeadListPage.module.css'
@@ -23,7 +24,10 @@ function generateId(): string {
 }
 
 export function LeadListPage() {
-  const [leads, setLeads] = useState<Lead[]>(() => getLeads())
+  const useDatabase = isDatabaseLeadsEnabled()
+  const [leads, setLeads] = useState<Lead[]>(() => (useDatabase ? [] : getLeads()))
+  const [loading, setLoading] = useState(useDatabase)
+  const [loadError, setLoadError] = useState<string | null>(null)
   const [view, setView] = useState<'table' | 'card'>(
     () => (localStorage.getItem(VIEW_KEY) as 'table' | 'card') ?? 'table',
   )
@@ -32,6 +36,25 @@ export function LeadListPage() {
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
 
   useEffect(() => {
+    if (useDatabase) {
+      setLoading(true)
+      setLoadError(null)
+      fetchLeadsFromApi()
+        .then((loaded) => {
+          setLeads(loaded)
+          if (import.meta.env.DEV) {
+            const withEmail = loaded.filter((l) => hasEmail(l))
+            console.debug('[CRM leads/db]', {
+              total: loaded.length,
+              withEmail: withEmail.length,
+            })
+          }
+        })
+        .catch((err) => setLoadError(String(err)))
+        .finally(() => setLoading(false))
+      return
+    }
+
     seedEnrichedLeadsIfEmpty()
     const loaded = getLeads()
     setLeads(loaded)
@@ -51,9 +74,15 @@ export function LeadListPage() {
         })),
       })
     }
-  }, [])
+  }, [useDatabase])
 
   function refresh() {
+    if (useDatabase) {
+      fetchLeadsFromApi()
+        .then(setLeads)
+        .catch((err) => setLoadError(String(err)))
+      return
+    }
     setLeads(getLeads())
   }
 
@@ -72,10 +101,14 @@ export function LeadListPage() {
   }
 
   const handleDelete = useCallback((id: string) => {
+    if (useDatabase) {
+      alert('Delete is not available in database mode yet.')
+      return
+    }
     if (!confirm('Delete this lead?')) return
     deleteLead(id)
     refresh()
-  }, [])
+  }, [useDatabase])
 
   function handleAddDemo() {
     const existing = getLeads()
@@ -141,7 +174,17 @@ export function LeadListPage() {
         </div>
       </div>
 
-      {leads.length === 0 ? (
+      {loadError && (
+        <Card variant="bordered" padding="md">
+          <p role="alert">Failed to load leads from database: {loadError}</p>
+        </Card>
+      )}
+
+      {loading ? (
+        <Card variant="default" padding="md">
+          <p>Loading leads from database…</p>
+        </Card>
+      ) : leads.length === 0 ? (
         <EmptyState
           icon="📋"
           heading="No leads yet"

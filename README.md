@@ -1,6 +1,6 @@
 # Jonnovative CRM
 
-A local-first CRM for tracking freelance web development leads, built with React, TypeScript, and Vite. Designed for personal use — all data lives in your browser's `localStorage`.
+A CRM for tracking freelance web development leads, built with React, TypeScript, and Vite. Supports local JSON/`localStorage` mode or Neon Postgres-backed persistence on Vercel.
 
 ---
 
@@ -15,6 +15,34 @@ pnpm test:ui     # open Vitest UI
 ```
 
 The default password is **`jonnovative2024`**. Change it from the Settings page after first login.
+
+---
+
+## Deployment (Vercel + Neon)
+
+Production database mode uses Vercel serverless API routes and Neon Postgres.
+
+### Vercel environment variables
+
+| Variable | Value |
+|----------|-------|
+| `DATABASE_URL` | Your Neon connection string (server-only) |
+| `VITE_USE_DATABASE_LEADS` | `true` |
+
+### Seed Neon (run locally against the same database)
+
+```bash
+pnpm db:push
+pnpm db:seed
+```
+
+### Local database dev
+
+```bash
+pnpm dev:full    # Vite + local API with /api proxy
+```
+
+See [`docs/DATABASE_API.md`](docs/DATABASE_API.md) for API routes, verification steps, and fallback behavior.
 
 ---
 
@@ -236,6 +264,8 @@ src/
 │   └── ProtectedRoute/ # Auth guard component
 ├── pages/              # Route-level page components
 ├── types/              # TypeScript types (lead.ts)
+├── db/                 # Drizzle schema, queries, mappers (server-side)
+├── server/             # Shared API response helpers
 ├── utils/              # Business logic utilities
 │   ├── authStorage.ts
 │   ├── leadFilters.ts
@@ -249,4 +279,7 @@ src/
 │   ├── enrichedData/       # Google Places enrichment output
 │   └── leads/              # Merged app-ready CRM dataset
 └── styles/             # Global CSS
+api/                    # Vercel serverless routes (/api/leads, /api/health)
+scripts/                # DB seed/push and local dev API
+docs/                   # Deployment and database docs
 ```
