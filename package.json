@@ -28,6 +28,7 @@
     "dev:full": "pnpm exec concurrently \"pnpm dev:api\" \"pnpm dev\""
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@pythonidaer/tokens": "^0.1.0",
     "@pythonidaer/ui": "^0.1.0",
     "dotenv": "^17.4.2",

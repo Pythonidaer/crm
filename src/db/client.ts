@@ -1,5 +1,5 @@
-import { drizzle } from 'drizzle-orm/postgres-js'
-import postgres from 'postgres'
+import { neon } from '@neondatabase/serverless'
+import { drizzle } from 'drizzle-orm/neon-http'
 import { leads } from './schema'
 
 function getDatabaseUrl(): string {
@@ -10,21 +10,16 @@ function getDatabaseUrl(): string {
   return url
 }
 
-let client: ReturnType<typeof postgres> | null = null
 let db: ReturnType<typeof drizzle<typeof import('./schema')>> | null = null
 
 export function getDb() {
   if (!db) {
-    client = postgres(getDatabaseUrl(), { max: 1 })
-    db = drizzle(client, { schema: { leads } })
+    const sql = neon(getDatabaseUrl())
+    db = drizzle(sql, { schema: { leads } })
   }
   return db
 }
 
 export async function closeDb() {
-  if (client) {
-    await client.end()
-    client = null
-    db = null
-  }
+  db = null
 }

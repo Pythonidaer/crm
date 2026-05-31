@@ -10,7 +10,7 @@ Deploy the Vite app and serverless API routes together on Vercel.
 
 | Variable | Scope | Purpose |
 |----------|-------|---------|
-| `DATABASE_URL` | Server | Neon Postgres connection string |
+| `DATABASE_URL` | Server | Neon Postgres connection string (use the pooled connection string from Neon dashboard) |
 | `VITE_USE_DATABASE_LEADS` | Build | Set to `true` to enable database mode in the UI |
 
 `VITE_API_BASE_URL` is **not** needed when frontend and API share the same Vercel domain (calls go to `/api/leads`).
