@@ -1,9 +1,9 @@
 import { createServer } from 'node:http'
 import { URL } from 'node:url'
 import dotenv from 'dotenv'
-import { getLeadById, getLeads, updateLeadEditableFields } from '../src/db/leadQueries.ts'
-import { parseLeadPatchBody } from '../src/db/leadPatchValidation.ts'
-import { closeDb } from '../src/db/client.ts'
+import { getLeadById, getLeads, updateLeadEditableFields } from '../lib/db/leadQueries.ts'
+import { parseLeadPatchBody } from '../lib/db/leadPatchValidation.ts'
+import { closeDb } from '../lib/db/client.ts'
 
 dotenv.config({ path: '.env.local' })
 dotenv.config()

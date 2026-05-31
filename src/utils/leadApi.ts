@@ -1,5 +1,5 @@
 import type { Lead } from '../types/lead'
-import type { LeadPatchInput } from '../db/leadMapper'
+import type { LeadPatchInput } from '../../lib/db/leadMapper'
 
 export function isDatabaseLeadsEnabled(): boolean {
   return import.meta.env['VITE_USE_DATABASE_LEADS'] === 'true'

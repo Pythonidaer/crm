@@ -264,8 +264,6 @@ src/
 │   └── ProtectedRoute/ # Auth guard component
 ├── pages/              # Route-level page components
 ├── types/              # TypeScript types (lead.ts)
-├── db/                 # Drizzle schema, queries, mappers (server-side)
-├── server/             # Shared API response helpers
 ├── utils/              # Business logic utilities
 │   ├── authStorage.ts
 │   ├── leadFilters.ts
@@ -280,6 +278,7 @@ src/
 │   └── leads/              # Merged app-ready CRM dataset
 └── styles/             # Global CSS
 api/                    # Vercel serverless routes (/api/leads, /api/health)
+lib/                    # Server-only DB schema, queries, API handlers
 scripts/                # DB seed/push and local dev API
 docs/                   # Deployment and database docs
 ```

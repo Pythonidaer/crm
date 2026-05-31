@@ -2,7 +2,7 @@ import { asc, eq } from 'drizzle-orm'
 import { getDb } from './client'
 import { patchInputToRow, rowToLead, type LeadPatchInput } from './leadMapper'
 import { leads } from './schema'
-import type { Lead } from '../types/lead'
+import type { Lead } from '../../src/types/lead'
 
 export async function getLeads(): Promise<Lead[]> {
   const db = getDb()

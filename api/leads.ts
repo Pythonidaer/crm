@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { handleLeadsGet } from '../src/server/leadsHandlers'
-import { methodNotAllowed, sendWebResponse } from '../src/server/apiUtils'
+import { handleLeadsGet } from '../lib/server/leadsHandlers'
+import { methodNotAllowed, sendResult } from '../lib/server/apiUtils'
 
 export const config = {
   maxDuration: 60,
@@ -17,5 +17,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     return
   }
 
-  await sendWebResponse(res, await handleLeadsGet())
+  sendResult(res, await handleLeadsGet())
 }

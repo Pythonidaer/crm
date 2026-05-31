@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { handleLeadGet, handleLeadPatch } from '../../src/server/leadsHandlers'
-import { methodNotAllowed, sendJson, sendWebResponse } from '../../src/server/apiUtils'
+import { handleLeadGet, handleLeadPatch } from '../../lib/server/leadsHandlers'
+import { methodNotAllowed, sendJson, sendResult } from '../../lib/server/apiUtils'
 
 export const config = {
   maxDuration: 60,
@@ -25,12 +25,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
   }
 
   if (req.method === 'GET') {
-    await sendWebResponse(res, await handleLeadGet(id))
+    sendResult(res, await handleLeadGet(id))
     return
   }
 
   if (req.method === 'PATCH') {
-    await sendWebResponse(res, await handleLeadPatch(id, req.body))
+    sendResult(res, await handleLeadPatch(id, req.body))
     return
   }
 
