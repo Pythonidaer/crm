@@ -1,6 +1,4 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { handleLeadGet, handleLeadPatch } from '../../lib/server/leadsHandlers'
-import { methodNotAllowed, sendJson, sendResult } from '../../lib/server/apiUtils'
 
 export const config = {
   maxDuration: 60,
@@ -20,19 +18,49 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
 
   const id = leadIdFromRequest(req)
   if (!id) {
-    sendJson(res, 400, { error: 'Lead id is required' })
+    res.status(400).json({ error: 'Lead id is required' })
     return
   }
 
-  if (req.method === 'GET') {
-    sendResult(res, await handleLeadGet(id))
-    return
-  }
+  try {
+    if (req.method === 'GET') {
+      const { getLeadById } = await import('../../lib/db/leadQueries')
+      const lead = await getLeadById(id)
+      if (!lead) {
+        res.status(404).json({ error: 'Lead not found' })
+        return
+      }
+      res.status(200).json(lead)
+      return
+    }
 
-  if (req.method === 'PATCH') {
-    sendResult(res, await handleLeadPatch(id, req.body))
-    return
-  }
+    if (req.method === 'PATCH') {
+      const { updateLeadEditableFields } = await import('../../lib/db/leadQueries')
+      const { parseLeadPatchBody } = await import('../../lib/db/leadPatchValidation')
+      const { patch, errors } = parseLeadPatchBody(req.body)
+      if (errors.length > 0) {
+        res.status(400).json({ error: errors.join('; ') })
+        return
+      }
 
-  methodNotAllowed(res, ['GET', 'PATCH'])
+      const lead = await updateLeadEditableFields(id, patch)
+      if (!lead) {
+        res.status(404).json({ error: 'Lead not found' })
+        return
+      }
+      res.status(200).json(lead)
+      return
+    }
+
+    res.setHeader('Allow', 'GET, PATCH')
+    res.status(405).json({ error: 'Method not allowed' })
+  } catch (err) {
+    console.error('[api/leads/[id]]', err)
+    const message = err instanceof Error ? err.message : String(err)
+    if (message.includes('DATABASE_URL')) {
+      res.status(503).json({ error: 'Database not configured' })
+      return
+    }
+    res.status(500).json({ error: 'Internal server error', detail: message.slice(0, 200) })
+  }
 }
