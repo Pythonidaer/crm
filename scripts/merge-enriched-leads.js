@@ -22,6 +22,13 @@ const ENRICHMENT_SOURCES = [
   { file: 'google-places-enriched.json', status: 'matched' },
 ]
 
+const EMAIL_ENRICHMENT_SOURCES = [
+  'email-errors.json',
+  'email-not-found.json',
+  'email-review-needed.json',
+  'email-enriched-leads.json',
+]
+
 function stableId(key) {
   const hash = createHash('sha256').update(key).digest('hex').slice(0, 12)
   return `lead-${hash}`
@@ -98,11 +105,47 @@ function loadEnrichmentMap() {
   return { map, counts }
 }
 
-function mergeLead(der, enrichment) {
+function loadEmailEnrichmentMap() {
+  const map = new Map()
+  const counts = {}
+
+  for (const file of EMAIL_ENRICHMENT_SOURCES) {
+    const rows = readJsonArray(join(ENRICHED_DIR, file))
+    for (const row of rows) {
+      if (!row.companyName) continue
+      const key = matchKey(row)
+      const status = row.emailEnrichmentStatus ?? 'unknown'
+      map.set(key, row)
+      counts[status] = (counts[status] ?? 0) + 1
+    }
+  }
+
+  return { map, counts }
+}
+
+function mergeEmailFields(der, emailEnrichment) {
+  const preservedEmail = der.email ?? null
+  const enrichedPrimary = emailEnrichment?.email ?? null
+  const emailsFound = Array.isArray(emailEnrichment?.emailsFound)
+    ? emailEnrichment.emailsFound.filter(Boolean)
+    : []
+
+  return {
+    email: preservedEmail ?? enrichedPrimary ?? null,
+    emailsFound,
+    emailSourceUrl: emailEnrichment?.emailSourceUrl ?? null,
+    emailEnrichmentStatus: emailEnrichment?.emailEnrichmentStatus ?? null,
+    emailEnrichmentNotes: emailEnrichment?.emailEnrichmentNotes ?? null,
+    emailEnrichedAt: emailEnrichment?.emailEnrichedAt ?? null,
+  }
+}
+
+function mergeLead(der, enrichment, emailEnrichment) {
   const now = new Date().toISOString()
   const key = matchKey(der)
   const googleDisplayName = enrichment?.googleDisplayName ?? null
   const enrichmentStatus = enrichment?.enrichmentStatus ?? 'not_enriched'
+  const emailFields = mergeEmailFields(der, emailEnrichment)
 
   const merged = {
     id: stableId(key),
@@ -117,7 +160,7 @@ function mergeLead(der, enrichment) {
     phoneNumber: enrichment?.phoneNumber ?? null,
     internationalPhoneNumber: enrichment?.internationalPhoneNumber ?? null,
     website: enrichment?.website ?? null,
-    email: der.email ?? enrichment?.email ?? null,
+    ...emailFields,
     googlePlaceId: enrichment?.googlePlaceId ?? null,
     googleMapsUri: enrichment?.googleMapsUri ?? null,
     businessStatus: enrichment?.businessStatus ?? null,
@@ -167,8 +210,12 @@ function countByStatus(leads) {
 function main() {
   const derLeads = loadDerLeads()
   const { map: enrichmentMap, counts: sourceCounts } = loadEnrichmentMap()
+  const { map: emailEnrichmentMap, counts: emailSourceCounts } = loadEmailEnrichmentMap()
 
-  const merged = derLeads.map((der) => mergeLead(der, enrichmentMap.get(matchKey(der))))
+  const merged = derLeads.map((der) => {
+    const key = matchKey(der)
+    return mergeLead(der, enrichmentMap.get(key), emailEnrichmentMap.get(key))
+  })
 
   mkdirSync(OUT_DIR, { recursive: true })
   writeFileSync(OUT_FILE, `${JSON.stringify(merged, null, 2)}\n`)
@@ -177,6 +224,8 @@ function main() {
   const withPhone = merged.filter((l) => l.phoneNumber || l.internationalPhoneNumber).length
   const withWebsite = merged.filter((l) => l.website).length
   const withMatchConfidence = merged.filter((l) => l.matchConfidence).length
+  const withEmail = merged.filter((l) => l.email).length
+  const withEmailEnrichment = merged.filter((l) => l.emailEnrichmentStatus).length
 
   console.log('Merge summary')
   console.log(`  Total DER leads:              ${derLeads.length}`)
@@ -185,9 +234,15 @@ function main() {
   console.log(`    review_needed:                ${sourceCounts.review_needed ?? 0}`)
   console.log(`    not_found:                    ${sourceCounts.not_found ?? 0}`)
   console.log(`    error:                        ${sourceCounts.error ?? 0}`)
+  console.log(`  Email enrichment matches:`)
+  for (const [status, count] of Object.entries(emailSourceCounts).sort()) {
+    console.log(`    ${status}: ${count}`)
+  }
   console.log(`  Total final output records:   ${merged.length}`)
   console.log(`  With phone:                   ${withPhone}`)
   console.log(`  With website:                 ${withWebsite}`)
+  console.log(`  With email:                   ${withEmail}`)
+  console.log(`  With email enrichment:        ${withEmailEnrichment}`)
   console.log(`  With matchConfidence:         ${withMatchConfidence}`)
   console.log(`  By enrichmentStatus:`)
   for (const [status, count] of Object.entries(statusCounts).sort()) {

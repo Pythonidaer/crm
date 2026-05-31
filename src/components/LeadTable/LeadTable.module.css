@@ -102,3 +102,23 @@
 .enrichmentReview { color: var(--color-warning-700); }
 .enrichmentMissing { color: var(--color-error-600); }
 .enrichmentPending { color: var(--color-text-muted); }
+
+.emailCell {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  max-width: 14rem;
+}
+
+.emailLink {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emailMore {
+  flex-shrink: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+}

@@ -8,6 +8,8 @@ describe('applyDefaults', () => {
     expect(lead.status).toBe('not_contacted')
     expect(lead.priority).toBe('medium')
     expect(lead.qualification.hasWebsite).toBe(false)
+    expect(lead.emailsFound).toEqual([])
+    expect(lead.emailEnrichmentStatus).toBeNull()
     expect(lead.companyName).toBe('')
     expect(lead.id).toBeTruthy()
   })

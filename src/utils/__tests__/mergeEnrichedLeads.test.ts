@@ -73,4 +73,25 @@ describe('merge-enriched-leads output', () => {
     expect(withPhone).toBeGreaterThan(1000)
     expect(withMatch).toBeGreaterThan(1000)
   })
+
+  it('includes email enrichment fields on every record', () => {
+    const leads = JSON.parse(readFileSync(OUT_FILE, 'utf8'))
+    for (const lead of leads.slice(0, 20)) {
+      expect(lead).toHaveProperty('email')
+      expect(Array.isArray(lead.emailsFound)).toBe(true)
+      expect(lead).toHaveProperty('emailSourceUrl')
+      expect(lead).toHaveProperty('emailEnrichmentStatus')
+      expect(lead).toHaveProperty('emailEnrichmentNotes')
+      expect(lead).toHaveProperty('emailEnrichedAt')
+      expect(lead.selector).toBeUndefined()
+    }
+  })
+
+  it('merges email enrichment from website scrape output', () => {
+    const leads = JSON.parse(readFileSync(OUT_FILE, 'utf8'))
+    const barrio = leads.find((l: { companyName: string }) => l.companyName === 'Barrio Tacos')
+    expect(barrio?.email).toBe('info@barrio-tacos.com')
+    expect(barrio?.emailEnrichmentStatus).toBe('found')
+    expect(barrio?.emailsFound).toContain('info@barrio-tacos.com')
+  })
 })

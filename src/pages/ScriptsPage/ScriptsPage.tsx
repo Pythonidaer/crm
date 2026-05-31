@@ -71,7 +71,6 @@ export function ScriptsPage() {
             <li className={styles.listItem}><strong>Accessibility audit</strong> — WCAG 2.1 AA compliance review</li>
             <li className={styles.listItem}><strong>SEO</strong> — local search visibility, on-page optimization</li>
             <li className={styles.listItem}><strong>AEO</strong> — AI engine optimization, structured data, featured snippets</li>
-            <li className={styles.listItem}><strong>Content cleanup</strong> — clear copy, removed confusion, better UX</li>
             <li className={styles.listItem}><strong>Site review</strong> — free 2–3 improvement summary to open the conversation</li>
           </ul>
         </ScriptCard>

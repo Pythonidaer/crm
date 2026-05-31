@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { Button, Card, Text } from '@pythonidaer/ui'
 import { LinkButton } from '../../components/LinkButton'
 import { LeadTable } from '../../components/LeadTable'
@@ -6,9 +6,10 @@ import { LeadCard } from '../../components/LeadCard'
 import { LeadFilters } from '../../components/LeadFilters'
 import { EmptyState } from '../../components/EmptyState'
 import { getLeads, deleteLead, saveLeads } from '../../utils/leadStorage'
-import { filterLeads, EMPTY_LEAD_FILTERS } from '../../utils/leadFilters'
+import { filterLeads, EMPTY_LEAD_FILTERS, hasEmail } from '../../utils/leadFilters'
 import { sortLeads } from '../../utils/leadSorting'
 import { applyDefaults } from '../../utils/leadValidation'
+import { seedEnrichedLeadsIfEmpty } from '../../utils/derSeedLoader'
 import { MOCK_LEADS } from '../../utils/mockLeadData'
 import type { Lead, LeadFilters as LeadFiltersType, LeadSortKey } from '../../types/lead'
 import styles from './LeadListPage.module.css'
@@ -29,6 +30,28 @@ export function LeadListPage() {
   const [filters, setFilters] = useState<LeadFiltersType>(EMPTY_FILTERS)
   const [sortKey, setSortKey] = useState<LeadSortKey>('companyName')
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
+
+  useEffect(() => {
+    seedEnrichedLeadsIfEmpty()
+    const loaded = getLeads()
+    setLeads(loaded)
+
+    if (import.meta.env.DEV) {
+      const withEmail = loaded.filter((l) => hasEmail(l))
+      console.debug('[CRM leads]', {
+        total: loaded.length,
+        withEmail: withEmail.length,
+        withEmailStatus: loaded.filter((l) => l.emailEnrichmentStatus).length,
+        emailReviewNeeded: loaded.filter((l) => l.emailEnrichmentStatus === 'review_needed').length,
+        allWithEmail: withEmail.map((l) => ({
+          companyName: l.companyName,
+          email: l.email,
+          emailEnrichmentStatus: l.emailEnrichmentStatus,
+          emailsFound: l.emailsFound,
+        })),
+      })
+    }
+  }, [])
 
   function refresh() {
     setLeads(getLeads())

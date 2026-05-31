@@ -16,7 +16,11 @@
     "build-storybook": "storybook build",
     "enrich:places": "node scripts/enrich-google-places.js",
     "enrich:places:dry-run": "node scripts/enrich-google-places.js --dry-run",
-    "merge:leads": "node scripts/merge-enriched-leads.js"
+    "enrich:emails": "node scripts/enrich-emails-from-websites.js",
+    "enrich:emails:merge": "node scripts/merge-enriched-leads.js",
+    "enrich:emails:dry-run": "node scripts/enrich-emails-from-websites.js --dry-run",
+    "merge:leads": "node scripts/merge-enriched-leads.js",
+    "debug:emails": "node scripts/debug-email-stats.js"
   },
   "dependencies": {
     "@pythonidaer/tokens": "^0.1.0",

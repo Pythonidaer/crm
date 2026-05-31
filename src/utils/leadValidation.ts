@@ -5,6 +5,7 @@ import type {
   MatchConfidence,
   LeadFitTier,
   EnrichmentStatus,
+  EmailEnrichmentStatus,
 } from '../types/lead'
 import { resolveDisplayName, scoreLeadFit } from './leadScoring.js'
 
@@ -26,6 +27,13 @@ const VALID_ENRICHMENT_STATUS: EnrichmentStatus[] = [
   'not_found',
   'error',
   'not_enriched',
+]
+const VALID_EMAIL_ENRICHMENT_STATUS: EmailEnrichmentStatus[] = [
+  'found',
+  'review_needed',
+  'not_found',
+  'skipped_no_website',
+  'error',
 ]
 
 function generateId(): string {
@@ -61,6 +69,17 @@ export function applyDefaults(raw: Partial<Lead>): Lead {
     internationalPhoneNumber: normalizeOptionalString(raw.internationalPhoneNumber),
     website,
     email: normalizeOptionalString(raw.email),
+    emailsFound: Array.isArray(raw.emailsFound)
+      ? raw.emailsFound.map((e) => String(e).trim()).filter(Boolean)
+      : [],
+    emailSourceUrl: normalizeOptionalString(raw.emailSourceUrl),
+    emailEnrichmentStatus: VALID_EMAIL_ENRICHMENT_STATUS.includes(
+      raw.emailEnrichmentStatus as EmailEnrichmentStatus,
+    )
+      ? (raw.emailEnrichmentStatus as EmailEnrichmentStatus)
+      : null,
+    emailEnrichmentNotes: normalizeOptionalString(raw.emailEnrichmentNotes),
+    emailEnrichedAt: normalizeOptionalString(raw.emailEnrichedAt),
     googlePlaceId: normalizeOptionalString(raw.googlePlaceId),
     googleMapsUri: normalizeOptionalString(raw.googleMapsUri),
     businessStatus: normalizeOptionalString(raw.businessStatus),

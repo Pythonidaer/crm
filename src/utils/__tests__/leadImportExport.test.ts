@@ -71,4 +71,22 @@ describe('exportLeadsToJson', () => {
     expect(parsed).toHaveLength(MOCK_LEADS.length)
     expect(parsed[0].companyName).toBe(MOCK_LEADS[0].companyName)
   })
+
+  it('includes email enrichment fields in export', () => {
+    const lead = {
+      ...MOCK_LEADS[0],
+      email: 'info@example.com',
+      emailsFound: ['info@example.com', 'sales@example.com'],
+      emailSourceUrl: 'https://example.com/contact',
+      emailEnrichmentStatus: 'found' as const,
+      emailEnrichmentNotes: '',
+      emailEnrichedAt: '2026-05-31T00:00:00.000Z',
+    }
+    const parsed = JSON.parse(exportLeadsToJson([lead]))[0]
+    expect(parsed.email).toBe('info@example.com')
+    expect(parsed.emailsFound).toEqual(['info@example.com', 'sales@example.com'])
+    expect(parsed.emailSourceUrl).toBe('https://example.com/contact')
+    expect(parsed.emailEnrichmentStatus).toBe('found')
+    expect(parsed.emailEnrichedAt).toBe('2026-05-31T00:00:00.000Z')
+  })
 })

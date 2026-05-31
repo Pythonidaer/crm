@@ -48,6 +48,20 @@ export function LeadCard({ lead, basePath = '/crm/leads', readOnly = false, onDe
         <div className={styles.meta}>
           <span>{lead.address || '—'}, {lead.city}, {lead.state}</span>
           {lead.sector && <span>{lead.sector}</span>}
+          {lead.website && (
+            <span>
+              <a href={lead.website} target="_blank" rel="noreferrer noopener">
+                Website
+              </a>
+            </span>
+          )}
+          {(lead.email || (lead.emailsFound?.length ?? 0) > 0) && (
+            <span>
+              <a href={`mailto:${lead.email ?? lead.emailsFound![0]}`}>
+                {lead.email ?? lead.emailsFound![0]}
+              </a>
+            </span>
+          )}
           {(lead.phoneNumber || lead.internationalPhoneNumber) && (
             <span>{formatPhone(lead)}</span>
           )}

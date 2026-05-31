@@ -24,9 +24,10 @@ const COLUMNS: { key: LeadSortKey | null; label: string }[] = [
   { key: 'sector', label: 'Sector' },
   { key: null, label: 'Phone' },
   { key: null, label: 'Website' },
+  { key: null, label: 'Email' },
   { key: null, label: 'Match Confidence' },
   { key: 'leadFitScore', label: 'Lead Fit' },
-  { key: null, label: 'Enrichment Status' },
+  { key: null, label: 'Places Status' },
   { key: 'status', label: 'Status' },
   { key: null, label: 'Priority' },
   { key: 'nextFollowUpAt', label: 'Next Follow Up' },
@@ -107,6 +108,27 @@ function LeadFitLabel({ lead }: { lead: Lead }) {
   )
 }
 
+function EmailCell({ lead }: { lead: Lead }) {
+  const primary = lead.email ?? lead.emailsFound?.[0] ?? null
+  if (!primary) return <span className={styles.muted}>—</span>
+
+  const extraCount =
+    (lead.emailsFound?.length ?? 0) > 1 ? lead.emailsFound!.length - 1 : 0
+
+  return (
+    <span className={styles.emailCell}>
+      <a href={`mailto:${primary}`} className={styles.emailLink}>
+        {primary}
+      </a>
+      {extraCount > 0 && (
+        <span className={styles.emailMore} title={lead.emailsFound!.join(', ')}>
+          +{extraCount}
+        </span>
+      )}
+    </span>
+  )
+}
+
 export function LeadTable({
   leads,
   basePath = '/crm/leads',
@@ -177,6 +199,9 @@ export function LeadTable({
                 ) : (
                   '—'
                 )}
+              </td>
+              <td className={styles.td}>
+                <EmailCell lead={lead} />
               </td>
               <td className={styles.td}>
                 <MatchConfidenceLabel

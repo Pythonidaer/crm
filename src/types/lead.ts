@@ -20,6 +20,13 @@ export type EnrichmentStatus =
   | 'error'
   | 'not_enriched'
 
+export type EmailEnrichmentStatus =
+  | 'found'
+  | 'review_needed'
+  | 'not_found'
+  | 'skipped_no_website'
+  | 'error'
+
 export interface LeadQualification {
   hasWebsite: boolean
   websiteNeedsWork: boolean
@@ -43,6 +50,11 @@ export interface Lead {
   internationalPhoneNumber: string | null
   website: string | null
   email: string | null
+  emailsFound: string[]
+  emailSourceUrl: string | null
+  emailEnrichmentStatus: EmailEnrichmentStatus | null
+  emailEnrichmentNotes: string | null
+  emailEnrichedAt: string | null
   googlePlaceId: string | null
   googleMapsUri: string | null
   businessStatus: string | null
@@ -89,5 +101,7 @@ export interface LeadFilters {
   leadFitTier: string
   hasWebsite: string
   hasPhone: string
+  hasEmail: string
+  emailEnrichmentStatus: string
   enrichmentStatus: string
 }

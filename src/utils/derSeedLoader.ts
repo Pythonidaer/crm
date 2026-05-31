@@ -1,11 +1,23 @@
 import { importLeads } from './leadImportExport'
 import { getLeads, saveLeads } from './leadStorage'
 import { applyDefaults } from './leadValidation'
+import { hasEmail } from './leadFilters'
 import { matchKey } from './leadMergeKey.js'
 import enrichedLeads from './leads/salem-leads.enriched.json'
 import type { Lead } from '../types/lead'
 
-export const ENRICHED_DATA_VERSION = '2'
+export const ENRICHED_DATA_VERSION = '7'
+
+function emailEnrichmentFingerprint(leads: Lead[]): string {
+  return leads
+    .filter((l) => l.emailEnrichmentStatus)
+    .map(
+      (l) =>
+        `${l.id}|${l.emailEnrichmentStatus}|${l.email ?? ''}|${(l.emailsFound ?? []).join(',')}`,
+    )
+    .sort()
+    .join('\n')
+}
 
 const CRM_PRESERVE_KEYS: (keyof Lead)[] = [
   'status',
@@ -32,12 +44,43 @@ function mergeCrmFields(enriched: Partial<Lead>, existing: Lead): Lead {
   })
 }
 
+function bundledLeads(): Lead[] {
+  return (enrichedLeads as Partial<Lead>[]).map((raw) => applyDefaults(raw))
+}
+
+function countEmailEnrichment(leads: Lead[]) {
+  return {
+    withEmail: leads.filter((l) => hasEmail(l)).length,
+    withStatus: leads.filter((l) => l.emailEnrichmentStatus).length,
+  }
+}
+
+/** True when bundled JSON has email enrichment that localStorage is missing. */
+export function bundledEmailDataIsNewer(stored: Lead[]): boolean {
+  const bundled = bundledLeads()
+  const bundledCounts = countEmailEnrichment(bundled)
+  const localCounts = countEmailEnrichment(stored)
+
+  if (bundledCounts.withEmail > localCounts.withEmail) return true
+  if (bundledCounts.withStatus > localCounts.withStatus) return true
+  if (emailEnrichmentFingerprint(bundled) !== emailEnrichmentFingerprint(stored)) return true
+
+  return false
+}
+
+export function shouldSyncEnrichedDataset(storedVersion: string | null, stored: Lead[]): boolean {
+  if (stored.length === 0) return true
+  if (storedVersion !== ENRICHED_DATA_VERSION) return true
+  return bundledEmailDataIsNewer(stored)
+}
+
 /** Replace local leads with merged enriched dataset, preserving CRM workflow fields. */
 export function syncEnrichedDataset(): number {
   const storedVersion = localStorage.getItem('jonnovative_crm_enriched_version')
-  if (storedVersion === ENRICHED_DATA_VERSION) return 0
-
   const existing = getLeads()
+
+  if (!shouldSyncEnrichedDataset(storedVersion, existing)) return 0
+
   const existingByKey = new Map(existing.map((lead) => [matchKey(lead), lead]))
 
   const synced = (enrichedLeads as Partial<Lead>[]).map((raw) => {
@@ -52,7 +95,14 @@ export function syncEnrichedDataset(): number {
 
 /** Load the merged enriched Salem dataset into localStorage, skipping duplicates. */
 export function seedFromEnrichedLeads(): number {
-  let current = getLeads()
+  const current = getLeads()
+  if (current.length === 0) {
+    const synced = bundledLeads()
+    saveLeads(synced)
+    localStorage.setItem('jonnovative_crm_enriched_version', ENRICHED_DATA_VERSION)
+    return synced.length
+  }
+
   const { imported } = importLeads(JSON.stringify(enrichedLeads), current)
   if (imported.length === 0) return 0
   saveLeads([...current, ...imported])

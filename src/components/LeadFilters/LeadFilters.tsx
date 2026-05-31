@@ -38,12 +38,22 @@ const LEAD_FIT_OPTIONS = [
 ]
 
 const ENRICHMENT_STATUS_OPTIONS = [
-  { value: '', label: 'All Enrichment Status' },
+  { value: '', label: 'All Places Status' },
   { value: 'matched', label: 'Matched' },
   { value: 'review_needed', label: 'Review Needed' },
   { value: 'not_found', label: 'Not Found' },
   { value: 'error', label: 'Error' },
   { value: 'not_enriched', label: 'Not Enriched' },
+]
+
+const EMAIL_ENRICHMENT_STATUS_OPTIONS = [
+  { value: '', label: 'All Email Status' },
+  { value: 'found', label: 'Found' },
+  { value: 'review_needed', label: 'Review Needed' },
+  { value: 'not_found', label: 'Not Found' },
+  { value: 'skipped_no_website', label: 'Skipped No Website' },
+  { value: 'error', label: 'Error' },
+  { value: 'none', label: 'Not Checked' },
 ]
 
 interface LeadFiltersProps {
@@ -149,9 +159,31 @@ export function LeadFilters({ filters, leads, onChange }: LeadFiltersProps) {
 
       <div className={styles.selectWrap}>
         <Select
+          value={filters.hasEmail}
+          onChange={(e) => set('hasEmail', e.target.value)}
+          aria-label="Filter by email availability"
+          options={[
+            { value: '', label: 'Email: Any' },
+            { value: 'yes', label: 'Has Email' },
+            { value: 'no', label: 'No Email' },
+          ]}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
+          value={filters.emailEnrichmentStatus}
+          onChange={(e) => set('emailEnrichmentStatus', e.target.value)}
+          aria-label="Filter by email enrichment status"
+          options={EMAIL_ENRICHMENT_STATUS_OPTIONS}
+        />
+      </div>
+
+      <div className={styles.selectWrap}>
+        <Select
           value={filters.enrichmentStatus}
           onChange={(e) => set('enrichmentStatus', e.target.value)}
-          aria-label="Filter by enrichment status"
+          aria-label="Filter by Google Places enrichment status"
           options={ENRICHMENT_STATUS_OPTIONS}
         />
       </div>

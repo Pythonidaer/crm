@@ -4,6 +4,10 @@ function hasPhone(lead: Lead): boolean {
   return Boolean(lead.phoneNumber || lead.internationalPhoneNumber)
 }
 
+export function hasEmail(lead: Lead): boolean {
+  return Boolean(lead.email) || (lead.emailsFound?.length ?? 0) > 0
+}
+
 export function filterLeads(leads: Lead[], filters: LeadFilters): Lead[] {
   return leads.filter((lead) => {
     if (filters.search) {
@@ -16,7 +20,9 @@ export function filterLeads(leads: Lead[], filters: LeadFilters): Lead[] {
         lead.sector.toLowerCase().includes(q) ||
         (lead.phoneNumber ?? '').toLowerCase().includes(q) ||
         (lead.internationalPhoneNumber ?? '').toLowerCase().includes(q) ||
-        (lead.website ?? '').toLowerCase().includes(q)
+        (lead.website ?? '').toLowerCase().includes(q) ||
+        (lead.email ?? '').toLowerCase().includes(q) ||
+        (lead.emailsFound ?? []).some((e) => e.toLowerCase().includes(q))
       if (!match) return false
     }
     if (filters.city && lead.city !== filters.city) return false
@@ -39,6 +45,18 @@ export function filterLeads(leads: Lead[], filters: LeadFilters): Lead[] {
 
     if (filters.hasPhone === 'yes' && !hasPhone(lead)) return false
     if (filters.hasPhone === 'no' && hasPhone(lead)) return false
+
+    if (filters.hasEmail === 'yes' && !hasEmail(lead)) return false
+    if (filters.hasEmail === 'no' && hasEmail(lead)) return false
+
+    if (filters.emailEnrichmentStatus) {
+      const emailStatus = lead.emailEnrichmentStatus ?? 'none'
+      if (filters.emailEnrichmentStatus === 'none') {
+        if (lead.emailEnrichmentStatus) return false
+      } else if (emailStatus !== filters.emailEnrichmentStatus) {
+        return false
+      }
+    }
 
     if (filters.enrichmentStatus) {
       const status = lead.enrichmentStatus ?? 'not_enriched'
@@ -68,6 +86,8 @@ export const EMPTY_LEAD_FILTERS: LeadFilters = {
   leadFitTier: '',
   hasWebsite: '',
   hasPhone: '',
+  hasEmail: '',
+  emailEnrichmentStatus: '',
   enrichmentStatus: '',
 }
 
@@ -77,4 +97,8 @@ export function formatEnrichmentStatus(status: Lead['enrichmentStatus']): string
 
 export function formatPhone(lead: Lead): string {
   return lead.phoneNumber || lead.internationalPhoneNumber || '—'
+}
+
+export function formatEmail(lead: Lead): string {
+  return lead.email ?? lead.emailsFound?.[0] ?? '—'
 }

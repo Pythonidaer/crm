@@ -3,11 +3,13 @@ import {
   seedEnrichedLeadsIfEmpty,
   seedFromEnrichedLeads,
   syncEnrichedDataset,
+  bundledEmailDataIsNewer,
   listDerSeedFiles,
   getEnrichedLeadCount,
   ENRICHED_DATA_VERSION,
 } from '../derSeedLoader'
-import { clearLeads, getLeads } from '../leadStorage'
+import { clearLeads, getLeads, saveLeads } from '../leadStorage'
+import { hasEmail } from '../leadFilters'
 
 describe('derSeedLoader', () => {
   beforeEach(() => {
@@ -32,6 +34,40 @@ describe('derSeedLoader', () => {
     expect(getLeads().filter((l) => l.phoneNumber || l.internationalPhoneNumber).length).toBeGreaterThan(
       1000,
     )
+    expect(getLeads().filter((l) => hasEmail(l)).length).toBeGreaterThan(0)
+  })
+
+  it('preserves email enrichment fields after seed', () => {
+    seedEnrichedLeadsIfEmpty()
+    const barrio = getLeads().find((l) => l.companyName === 'Barrio Tacos')
+    expect(barrio?.email).toBe('info@barrio-tacos.com')
+    expect(barrio?.emailsFound).toContain('info@barrio-tacos.com')
+    expect(barrio?.emailEnrichmentStatus).toBe('found')
+  })
+
+  it('resyncs when version matches but email enrichment is missing locally', () => {
+    seedEnrichedLeadsIfEmpty()
+    localStorage.setItem('jonnovative_crm_enriched_version', ENRICHED_DATA_VERSION)
+
+    const stripped = getLeads().map((lead) => ({
+      ...lead,
+      email: null,
+      emailsFound: [],
+      emailSourceUrl: null,
+      emailEnrichmentStatus: null,
+      emailEnrichmentNotes: null,
+      emailEnrichedAt: null,
+    }))
+    saveLeads(stripped)
+    expect(getLeads().filter((l) => hasEmail(l)).length).toBe(0)
+    expect(bundledEmailDataIsNewer(getLeads())).toBe(true)
+
+    const synced = syncEnrichedDataset()
+    expect(synced).toBe(2219)
+    expect(getLeads().filter((l) => hasEmail(l)).length).toBeGreaterThan(0)
+
+    const barrio = getLeads().find((l) => l.companyName === 'Barrio Tacos')
+    expect(barrio?.email).toBe('info@barrio-tacos.com')
   })
 
   it('syncs enriched dataset over stale local leads', () => {
