@@ -33,9 +33,40 @@ async function parseJson<T>(response: Response): Promise<T> {
   return response.json() as Promise<T>
 }
 
+interface LeadsPageResponse {
+  leads: Lead[]
+  total: number
+  page: number
+  pageSize: number
+  hasMore: boolean
+}
+
+function isLeadsPageResponse(value: unknown): value is LeadsPageResponse {
+  if (!value || typeof value !== 'object') return false
+  const record = value as LeadsPageResponse
+  return Array.isArray(record.leads) && typeof record.hasMore === 'boolean'
+}
+
 export async function fetchLeadsFromApi(): Promise<Lead[]> {
-  const response = await fetch(`${apiBaseUrl()}/api/leads`)
-  return parseJson<Lead[]>(response)
+  const all: Lead[] = []
+  let page = 1
+
+  while (true) {
+    const response = await fetch(`${apiBaseUrl()}/api/leads?page=${page}&pageSize=500`)
+    const body = await parseJson<Lead[] | LeadsPageResponse>(response)
+
+    if (Array.isArray(body)) return body
+
+    if (!isLeadsPageResponse(body)) {
+      throw new Error('Unexpected leads API response')
+    }
+
+    all.push(...body.leads)
+    if (!body.hasMore) break
+    page += 1
+  }
+
+  return all
 }
 
 export async function fetchLeadFromApi(id: string): Promise<Lead> {

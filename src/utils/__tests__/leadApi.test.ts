@@ -18,11 +18,12 @@ describe('leadApi', () => {
     const leads = [{ id: 'lead-1', companyName: 'Acme' }]
     vi.mocked(fetch).mockResolvedValue({
       ok: true,
-      json: async () => leads,
+      headers: new Headers({ 'content-type': 'application/json' }),
+      json: async () => ({ leads, total: 1, page: 1, pageSize: 500, hasMore: false }),
     } as Response)
 
     await expect(fetchLeadsFromApi()).resolves.toEqual(leads)
-    expect(fetch).toHaveBeenCalledWith('/api/leads')
+    expect(fetch).toHaveBeenCalledWith('/api/leads?page=1&pageSize=500')
   })
 
   it('fetchLeadFromApi throws on error response', async () => {

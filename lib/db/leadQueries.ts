@@ -66,6 +66,18 @@ export async function getLeads(): Promise<Lead[]> {
   return rowsToLeads(rows as Record<string, unknown>[])
 }
 
+export async function getLeadsPage(page: number, pageSize: number): Promise<Lead[]> {
+  const sql = getSql()
+  const safePage = Math.max(1, page)
+  const safeSize = Math.min(Math.max(1, pageSize), 500)
+  const offset = (safePage - 1) * safeSize
+  const rows = await sql.query(
+    `${SELECT_LEADS} ORDER BY display_name ASC, company_name ASC LIMIT $1 OFFSET $2`,
+    [safeSize, offset],
+  )
+  return rowsToLeads(rows as Record<string, unknown>[])
+}
+
 export async function getLeadById(id: string): Promise<Lead | null> {
   const sql = getSql()
   const rows = await sql.query(`${SELECT_LEADS} WHERE id = $1 LIMIT 1`, [id])
