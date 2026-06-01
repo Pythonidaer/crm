@@ -65,6 +65,17 @@ function getSql() {
   return neon(url)
 }
 
+function toIsoOrEmpty(value: string | Date | null | undefined): string {
+  if (value == null) return ''
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? '' : value.toISOString()
+  }
+  const trimmed = String(value).trim()
+  if (!trimmed) return ''
+  const parsed = new Date(trimmed)
+  return Number.isNaN(parsed.getTime()) ? '' : parsed.toISOString()
+}
+
 function rowToLead(raw: Record<string, unknown>): Lead {
   const emailsFound = raw['emailsFound']
   return {
@@ -87,7 +98,7 @@ function rowToLead(raw: Record<string, unknown>): Lead {
     emailSourceUrl: (raw['emailSourceUrl'] as string | null) ?? null,
     emailEnrichmentStatus: (raw['emailEnrichmentStatus'] as Lead['emailEnrichmentStatus']) ?? null,
     emailEnrichmentNotes: (raw['emailEnrichmentNotes'] as string | null) ?? null,
-    emailEnrichedAt: (raw['emailEnrichedAt'] as string | null) ?? null,
+    emailEnrichedAt: toIsoOrEmpty(raw['emailEnrichedAt'] as string | Date | null | undefined) || null,
     googlePlaceId: (raw['googlePlaceId'] as string | null) ?? null,
     googleMapsUri: (raw['googleMapsUri'] as string | null) ?? null,
     businessStatus: (raw['businessStatus'] as string | null) ?? null,
@@ -97,14 +108,14 @@ function rowToLead(raw: Record<string, unknown>): Lead {
     enrichmentNotes: (raw['enrichmentNotes'] as string | null) ?? null,
     sourceUrl: String(raw['sourceUrl'] ?? ''),
     dataSource: String(raw['dataSource'] ?? 'manual'),
-    lastEnrichedAt: (raw['lastEnrichedAt'] as string | null) ?? null,
+    lastEnrichedAt: toIsoOrEmpty(raw['lastEnrichedAt'] as string | Date | null | undefined) || null,
     status: (raw['status'] as Lead['status']) ?? 'not_contacted',
     priority: (raw['priority'] as Lead['priority']) ?? 'medium',
     contactName: String(raw['contactName'] ?? ''),
     contactRole: String(raw['contactRole'] ?? ''),
     contactEmail: String(raw['contactEmail'] ?? ''),
-    lastContactedAt: String(raw['lastContactedAt'] ?? ''),
-    nextFollowUpAt: String(raw['nextFollowUpAt'] ?? ''),
+    lastContactedAt: toIsoOrEmpty(raw['lastContactedAt'] as string | Date | null | undefined),
+    nextFollowUpAt: toIsoOrEmpty(raw['nextFollowUpAt'] as string | Date | null | undefined),
     notes: String(raw['notes'] ?? ''),
     qualification: {
       hasWebsite: Boolean(raw['hasWebsite']),
@@ -117,8 +128,8 @@ function rowToLead(raw: Record<string, unknown>): Lead {
     leadFitScore: Number(raw['leadFitScore'] ?? 0),
     leadFitTier: (raw['leadFitTier'] as Lead['leadFitTier']) ?? 'medium',
     disqualificationReason: (raw['disqualificationReason'] as string | null) ?? null,
-    createdAt: String(raw['createdAt'] ?? ''),
-    updatedAt: String(raw['updatedAt'] ?? ''),
+    createdAt: toIsoOrEmpty(raw['createdAt'] as string | Date | null | undefined),
+    updatedAt: toIsoOrEmpty(raw['updatedAt'] as string | Date | null | undefined),
   }
 }
 
