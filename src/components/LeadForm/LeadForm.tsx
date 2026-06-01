@@ -8,6 +8,7 @@ import {
   Checkbox,
 } from '@pythonidaer/ui'
 import type { Lead } from '../../types/lead'
+import { fromDateInputValue, toDateInputValue } from '../../utils/dateInput'
 import styles from './LeadForm.module.css'
 
 const STATUS_OPTIONS = [
@@ -138,20 +139,16 @@ export function LeadForm({ lead, onSave, onCancel, saving = false, saveError = n
             <Input
               id="nextFollowUpAt"
               type="date"
-              value={draft.nextFollowUpAt ? draft.nextFollowUpAt.slice(0, 10) : ''}
-              onChange={(e) =>
-                set('nextFollowUpAt', e.target.value ? new Date(e.target.value).toISOString() : '')
-              }
+              value={toDateInputValue(draft.nextFollowUpAt)}
+              onChange={(e) => set('nextFollowUpAt', fromDateInputValue(e.target.value))}
             />
           </FormField>
           <FormField label="Last Contacted" htmlFor="lastContactedAt">
             <Input
               id="lastContactedAt"
               type="date"
-              value={draft.lastContactedAt ? draft.lastContactedAt.slice(0, 10) : ''}
-              onChange={(e) =>
-                set('lastContactedAt', e.target.value ? new Date(e.target.value).toISOString() : '')
-              }
+              value={toDateInputValue(draft.lastContactedAt)}
+              onChange={(e) => set('lastContactedAt', fromDateInputValue(e.target.value))}
             />
           </FormField>
         </div>

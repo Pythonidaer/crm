@@ -13,16 +13,7 @@ import type {
   MatchConfidence,
 } from '../../../src/types/lead'
 
-function toIsoOrEmpty(value: string | null | undefined): string {
-  if (!value) return ''
-  return value
-}
-
-function toIsoOrNull(value: string | undefined): string | null {
-  if (!value) return null
-  const trimmed = value.trim()
-  return trimmed || null
-}
+import { toIsoOrEmpty, toIsoOrNull } from './timestampUtils'
 
 function normalizeEmailsFound(value: unknown): string[] {
   if (!Array.isArray(value)) return []

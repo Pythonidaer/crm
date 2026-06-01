@@ -1,5 +1,6 @@
 import type { LeadPriority, LeadStatus } from '../../../src/types/lead'
 import type { LeadPatchInput } from './leadMapper'
+import { parsePatchTimestamp } from './timestampUtils'
 
 const VALID_STATUSES: LeadStatus[] = [
   'not_contacted',
@@ -36,10 +37,6 @@ const PATCHABLE_KEYS = new Set<keyof LeadPatchInput>([
   'aeoOpportunity',
   'decisionMakerFound',
 ])
-
-function isNullableDateString(value: unknown): value is string {
-  return typeof value === 'string'
-}
 
 function parseBoolean(value: unknown, field: string, errors: string[]): boolean | undefined {
   if (value === undefined) return undefined
@@ -87,14 +84,11 @@ export function parseLeadPatchBody(body: unknown): { patch: LeadPatchInput; erro
         }
         break
       case 'nextFollowUpAt':
-      case 'lastContactedAt':
-        if (value === undefined) break
-        if (value === null || isNullableDateString(value)) {
-          patch[key] = value ?? ''
-        } else {
-          errors.push(`${key} must be a string or null`)
-        }
+      case 'lastContactedAt': {
+        const parsed = parsePatchTimestamp(value, key, errors)
+        if (parsed !== undefined) patch[key] = parsed
         break
+      }
       case 'contactName':
       case 'contactRole':
       case 'contactEmail':

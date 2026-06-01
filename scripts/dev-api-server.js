@@ -3,6 +3,7 @@ import { URL } from 'node:url'
 import dotenv from 'dotenv'
 import { getLeadById, getLeads, updateLeadEditableFields } from '../api/lib/db/leadQueries.ts'
 import { parseLeadPatchBody } from '../api/lib/db/leadPatchValidation.ts'
+import { isTimestampSyntaxError } from '../api/lib/db/timestampUtils.ts'
 import { closeDb } from '../api/lib/db/client.ts'
 
 dotenv.config({ path: '.env.local' })
@@ -113,6 +114,15 @@ const server = createServer(async (req, res) => {
     sendJson(res, 404, { error: 'Not found' })
   } catch (err) {
     console.error(err)
+    const message = err instanceof Error ? err.message : String(err)
+    if (message.includes('DATABASE_URL')) {
+      sendJson(res, 503, { error: 'Database not configured' })
+      return
+    }
+    if (isTimestampSyntaxError(message)) {
+      sendJson(res, 400, { error: 'Invalid date value' })
+      return
+    }
     sendJson(res, 500, { error: 'Internal server error' })
   }
 })

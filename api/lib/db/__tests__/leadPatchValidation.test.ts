@@ -59,4 +59,12 @@ describe('parseLeadPatchBody', () => {
     const { errors } = parseLeadPatchBody({ companyName: 'Ignored only' })
     expect(errors).toEqual(['No editable fields provided'])
   })
+
+  it('rejects invalid date strings', () => {
+    const { errors } = parseLeadPatchBody({
+      notes: 'Updated',
+      lastContactedAt: 'invalid-date',
+    })
+    expect(errors).toEqual(['lastContactedAt must be a valid date'])
+  })
 })

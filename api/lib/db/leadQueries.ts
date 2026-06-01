@@ -123,8 +123,12 @@ export async function updateLeadEditableFields(
       id,
       rowPatch.status ?? existing.status,
       rowPatch.priority ?? existing.priority,
-      rowPatch.nextFollowUpAt ?? (existing.nextFollowUpAt || null),
-      rowPatch.lastContactedAt ?? (existing.lastContactedAt || null),
+      rowPatch.nextFollowUpAt !== undefined
+        ? rowPatch.nextFollowUpAt
+        : existing.nextFollowUpAt || null,
+      rowPatch.lastContactedAt !== undefined
+        ? rowPatch.lastContactedAt
+        : existing.lastContactedAt || null,
       rowPatch.contactName ?? existing.contactName,
       rowPatch.contactRole ?? existing.contactRole,
       rowPatch.contactEmail ?? existing.contactEmail,

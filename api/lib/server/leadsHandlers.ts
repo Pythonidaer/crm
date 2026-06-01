@@ -1,5 +1,6 @@
 import { countLeads, getLeadById, getLeads, updateLeadEditableFields } from '../db/leadQueries'
 import { parseLeadPatchBody } from '../db/leadPatchValidation'
+import { isTimestampSyntaxError } from '../db/timestampUtils'
 
 export interface ApiResult {
   status: number
@@ -19,6 +20,9 @@ function handleError(err: unknown): ApiResult {
   const message = err instanceof Error ? err.message : String(err)
   if (message.includes('DATABASE_URL')) {
     return fail(503, 'Database not configured')
+  }
+  if (isTimestampSyntaxError(message)) {
+    return fail(400, 'Invalid date value')
   }
   return fail(500, 'Internal server error')
 }
